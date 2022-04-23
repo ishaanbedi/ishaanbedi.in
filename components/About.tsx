@@ -8,7 +8,7 @@ export default function About() {
                 {about.title}
             </h1>
             <h3
-                className="text-slate-400 mt-4 text-gray-300 "
+                className="text-slate-400 mt-4 "
             >
                 Hi, I am Ishaan &amp; I develop web applications.<br />
                 

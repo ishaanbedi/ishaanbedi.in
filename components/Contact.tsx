@@ -25,7 +25,7 @@ export default function Contact() {
                 Contact Me
             </h1>
             <h3
-                className="mt-4 text-gray-300"
+                className="mt-4 text-slate-400"
             >
                 Reach me at <a href={sugarEmail} ><span className='text-gray-100 font-bold link link-hover underline-offset-4 hover:underline text-bold'>{contactDetails.email}</span></a>
 
