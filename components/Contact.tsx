@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+
 import { BsGithub } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsYoutube } from 'react-icons/bs';
@@ -27,44 +27,45 @@ export default function Contact() {
             <h3
                 className="mt-4 text-gray-300"
             >
-                Reach me at <Link href={sugarEmail} ><span className='text-gray-100 font-bold link link-hover underline-offset-4 hover:underline text-bold'>{contactDetails.email}</span></Link>
+                Reach me at <a href={sugarEmail} ><span className='text-gray-100 font-bold link link-hover underline-offset-4 hover:underline text-bold'>{contactDetails.email}</span></a>
 
             </h3>
             <div className='mt-6'>
-                <Link href={sugarGithub} >
-                    <a target={'_blank'} className='tooltip tooltip-bottom' data-tip="Github">
-                        <button className="btn btn-circle btn-outline ml-0 m-2 ">
 
-                            <BsGithub />
-                        </button>
-                    </a>
-                </Link>
+                <a href='https://www.github.com/ishaanbedi' target={'_blank'} className='tooltip tooltip-bottom' data-tip="Github">
+                    <button className="btn btn-circle btn-outline ml-0 m-2 ">
 
-                <Link href={sugarLinkedin}>
-                    <a target={'_blank'} className='tooltip tooltip-bottom' data-tip="Linkedin">
+                        <BsGithub />
+                    </button>
+                </a>
 
-                        <button className="btn btn-circle btn-outline m-2">
-                            <BsLinkedin />
-                        </button>
-                    </a>
-                </Link>
-                <Link href={sugarYoutube}>
-                    <a target={'_blank'} className='tooltip tooltip-bottom' data-tip="YouTube">
+                <a href='https://www.linkedin.com/in/ishaanbedi13' target={'_blank'} className='tooltip tooltip-bottom' data-tip="Linkedin">
+                    <button className="btn btn-circle btn-outline ml-0 m-2 ">
 
-                        <button className="btn btn-circle btn-outline m-2">
-                            <BsYoutube />
+                        <BsLinkedin />
+                    </button>
+                </a>
 
-                        </button>
-                    </a>
-                </Link>
-                <Link href={sugarTwitter}>
-                    <a target={'_blank'} className='tooltip tooltip-bottom' data-tip="Twitter">
 
-                        <button className="btn btn-circle btn-outline m-2">
-                            <BsTwitter />
-                        </button>
-                    </a>
-                </Link>
+                <a href='https://www.youtube.com/ishaanbedi' target={'_blank'} className='tooltip tooltip-bottom' data-tip="YouTube">
+                    <button className="btn btn-circle btn-outline ml-0 m-2 ">
+
+                        <BsYoutube />
+                    </button>
+                </a>
+
+
+                <a href='https://www.twitter.com/ishaaanbedi' target={'_blank'} className='tooltip tooltip-bottom' data-tip="Twitter">
+                    <button className="btn btn-circle btn-outline ml-0 m-2 ">
+
+                        <BsTwitter />
+                    </button>
+                </a>
+
+
+
+
+
             </div>
 
         </>

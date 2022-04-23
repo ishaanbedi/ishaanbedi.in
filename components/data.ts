@@ -12,8 +12,6 @@ export const techStack = {
     title: 'My Stack',
     stack:
         [
-            'Swift',
-            'SwiftUI',
             'HTML',
             'CSS',
             'JavaScript',
@@ -22,6 +20,9 @@ export const techStack = {
             'React',
             'NextJS',
             'Git & Github',
+            'Swift',
+            'SwiftUI'
+            
         ]
 };
 

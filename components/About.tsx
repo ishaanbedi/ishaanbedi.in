@@ -10,9 +10,8 @@ export default function About() {
             <h3
                 className="mt-4 text-gray-300 "
             >
-                Hi, I am Ishaan & I love developing web applications.<br />
-                I'm pursuing undergraduate engineering degree from MAIT, Delhi.<br />
-                Currently, I am learning app development for the Apple Ecosystem in SwiftUI.<br />
+                Hi, I am Ishaan &amp; I develop web applications.<br />
+                
             </h3>
 
         </>

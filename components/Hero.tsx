@@ -1,10 +1,11 @@
 import { details } from './data';
+import Image from 'next/image';
 export default function Hero() {
     return (
         <>
             <div className="avatar">
                 <div className="shadow-lg  w-24 rounded-full ring ring-blue ring-offset-base-100 ring-offset-2">
-                    <img src="https://www.ishaanbedi.in/_next/image?url=%2Fstatic%2Fprofile.png&w=3840&q=75" />
+                    <Image alt='Profile Image' width={100} height={100} src="/profile.jpeg" />
                 </div>
             </div>
             <h1
