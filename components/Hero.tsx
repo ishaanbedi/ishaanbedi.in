@@ -15,7 +15,7 @@ export default function Hero() {
             </h1>
 
             <h3
-                className="mt-5 text-gray-300 "
+                className="text-slate-400 mt-2  "
             >
                 {details.headline}
             </h3>
