@@ -6,7 +6,7 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <title>
-                        Ishaan Bedi | Developer
+                        Ishaan Bedi - Developer
                     </title>
 
 
