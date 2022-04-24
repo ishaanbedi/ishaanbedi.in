@@ -13,13 +13,6 @@ import { ST } from 'next/dist/shared/lib/utils'
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Ishaan Bedi</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
-        
-        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        <noscript><Image width={1} height={1} src="/noscript.gif" alt="" referrerPolicy="no-referrer-when-downgrade" /></noscript>
-      </Head>
       <div className={styles.container} >
         <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
           {/* <Navbar /> */}
