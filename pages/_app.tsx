@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <NextNProgress />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
