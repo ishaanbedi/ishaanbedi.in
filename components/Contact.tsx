@@ -33,14 +33,14 @@ export default function Contact() {
             <div className='mt-6'>
 
                 <a href='https://www.github.com/ishaanbedi' target={'_blank'} rel="noreferrer"  className='tooltip tooltip-bottom' data-tip="Github">
-                <button className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
+                <button aria-label="github" className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
 
                         <BsGithub />
                     </button>
                 </a>
 
                 <a href='https://www.linkedin.com/in/ishaanbedi13' target={'_blank'} rel="noreferrer"  className='tooltip tooltip-bottom' data-tip="Linkedin">
-                <button className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
+                <button aria-label="linkedin" className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
 
                         <BsLinkedin />
                     </button>
@@ -48,7 +48,7 @@ export default function Contact() {
 
 
                 <a href='https://www.youtube.com/ishaanbedi' target={'_blank'} rel="noreferrer"  className='tooltip tooltip-bottom' data-tip="YouTube">
-                <button className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
+                <button aria-label="youtube" className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
 
                         <BsYoutube />
                     </button>
@@ -56,7 +56,7 @@ export default function Contact() {
 
 
                 <a href='https://www.twitter.com/ishaaanbedi' target={'_blank'} rel="noreferrer"  className='tooltip tooltip-bottom' data-tip="Twitter">
-                    <button className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
+                    <button aria-label="twitter" className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
 
                         <BsTwitter />
                     </button>
