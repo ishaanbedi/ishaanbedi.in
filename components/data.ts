@@ -22,7 +22,6 @@ export const techStack = {
             'Git & Github',
             'Swift',
             'SwiftUI'
-            
         ]
 };
 
