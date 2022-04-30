@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/_document.tsx", "postcss.config.js"  ],
+, "pages/_document.tsx", "postcss.config.js", "components/Navbar.tsx"  ],
   "exclude": [
     "node_modules"
   ]

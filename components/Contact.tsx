@@ -3,6 +3,7 @@ import { BsGithub } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsYoutube } from 'react-icons/bs';
 import { BsTwitter } from 'react-icons/bs';
+import { BsMedium } from 'react-icons/bs';
 import { contactDetails } from './data';
 
 var email = contactDetails.email;
@@ -11,16 +12,11 @@ var linkedin = contactDetails.linkedin;
 var twitter = contactDetails.twitter;
 var youtube = contactDetails.youtube;
 var sugarEmail = `mailto:${email}`;
-var sugarGithub = `https://www.github.com/${github}`;
-var sugarLinkedin = `https://www.linkedin.com/in/${linkedin}`;
-var sugarTwitter = `https://www.twitter.com/${twitter}`;
-var sugarYoutube = `https://www.youtube.com/${youtube}`;
-var sugarEmail = `mailto:${email}`;
 export default function Contact() {
     return (
         <>
             <h1
-                className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-400  to-blue-600 pt-5 mt-10 xl:text-3xl text-2xl font-bold"
+                className="text-transparent bg-clip-text bg-gradient-to-br from-primary  to-secondary pt-5 mt-10 xl:text-3xl text-2xl font-bold"
             >
                 Contact Me
             </h1>
@@ -59,6 +55,12 @@ export default function Contact() {
                     <button aria-label="twitter" className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
 
                         <BsTwitter />
+                    </button>
+                </a>
+                <a href='https://ishaanbedi.medium.com/' target={'_blank'} rel="noreferrer" className='tooltip tooltip-bottom' data-tip="Medium">
+                    <button aria-label="medium" className="btn btn-circle text-slate-400 btn-outline ml-0 m-2 ">
+
+                        <BsMedium />
                     </button>
                 </a>
 

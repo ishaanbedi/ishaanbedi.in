@@ -5,7 +5,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-              
+
 
 
                     <meta name="title" content="Ishaan Bedi" />

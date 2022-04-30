@@ -1,11 +1,10 @@
-import Head from 'next/head'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Stack from '../components/Stack'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
-import styles from '../styles/Home.module.css'
-console.log('Hi! Nice meeting you here! Let us work together! Drop me an email at hi@ishaanbedi.in ')
+import Head from 'next/head';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Stack from '../components/Stack';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+import styles from '../styles/Home.module.css';
 export default function Home() {
   return (
     <>
@@ -17,7 +16,6 @@ export default function Home() {
       </Head>
       <div className={styles.container} >
         <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
-
           <Hero />
           <About />
           <Stack />
