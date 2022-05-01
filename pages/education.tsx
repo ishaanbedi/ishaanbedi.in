@@ -34,7 +34,7 @@ export default function Education() {
 
                             </ul>
                         </div>
-                        <Link href='/'>
+                        <Link href='/' passHref>
                             <button className="btn btn-primary btn-outline">Home</button>
                         </Link>
                     </div>
