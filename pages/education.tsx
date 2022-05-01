@@ -1,33 +1,37 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
+import { educationData } from '../components/data';
 export default function Education() {
     return (
         <>
             <Head>
                 <title>
-                    Education - Ishaan Bedi
+                    {educationData.title}
                 </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
             </Head>
+            <Navbar />
             <div className={styles.container} >
-                <Navbar />
+
                 <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
+                    <h1 className="lg:text-6xl text-3xl font-bold mt-16 text-transparent bg-clip-text bg-gradient-to-br from-primary  to-secondary">Education</h1>
                     <div className="wrapper">
                         <div className="college-div my-16">
-                            <h1 className='font-bold lg:text-3xl text-transparent bg-clip-text bg-gradient-to-br from-primary  to-secondary'>Maharaja Agrasen Institute of Technology, Delhi</h1>
+                            <h1 className='font-bold lg:text-3xl text-xl text-transparent bg-clip-text bg-gradient-to-br from-primary  to-secondary'>{educationData.college.name}</h1>
                             <ul className='list-disc mt-4 ml-2'>
-                                <li>Electronics and Communications Engineering</li>
-                                <li>December 2021 - 2025</li>
+                                <li>{educationData.college.degree}</li>
+                                <li>{educationData.college.duration}</li>
                             </ul>
                         </div>
                         <div className="school-div my-16">
-                            <h1 className='font-bold lg:text-3xl text-transparent bg-clip-text bg-gradient-to-br from-primary  to-secondary'>S.T. Xavier’s School, Rohini, Delhi</h1>
+                            <h1 className='font-bold lg:text-3xl text-xl text-transparent bg-clip-text bg-gradient-to-br from-primary  to-secondary'>{educationData.school.name}</h1>
                             <ul className='list-disc mt-4 ml-2'>
-                                <li>High School : Computer Science</li>
-                                <li>April 2011 - July 2021</li>
-                                <li>92% in CBSE Class XII & 94.8% in CBSE Class X </li>
+                                <li>{educationData.school.degree}</li>
+                                <li>{educationData.school.duration}</li>
+                                <li>{educationData.school.grade}</li>
+
                             </ul>
                         </div>
                         <Link href='/'>

@@ -11,9 +11,7 @@ export default function About() {
                 className="text-slate-400 mt-4 "
             >
                 Hi, I am Ishaan &amp; I develop web applications.<br />
-                
             </h3>
-
         </>
     )
 }

@@ -1,17 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-
+import { metaDetails } from '../components/data'
 class MyDocument extends Document {
     render() {
         return (
-            <Html lang="en">
+            <Html lang="EN">
                 <Head>
-
-
-
-                    <meta name="title" content="Ishaan Bedi" />
-                    <meta name="description" content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India." />
-
-
+                    <meta name="title" content={metaDetails.title} />
+                    <meta name="description" content={metaDetails.description} />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://ishaanbedi.in/" />
                     <meta property="og:title" content="Ishaan Bedi" />
