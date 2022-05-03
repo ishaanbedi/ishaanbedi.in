@@ -4,7 +4,7 @@ export const details = {
 };
 
 export const metaDetails = {
-    title : "Ishaan Bedi - Developer",
+    title : "Ishaan Bedi",
     description : "Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
 }
 
