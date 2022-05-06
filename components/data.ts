@@ -67,3 +67,6 @@ export const educationData = {
 export const usesData = {
     title: "Ishaan Bedi - Uses"
 }
+export const roadmapData = {
+    title: "Ishaan Bedi - Roadmap"
+}
