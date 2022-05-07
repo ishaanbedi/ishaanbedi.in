@@ -38,6 +38,7 @@ export default function Education() {
                             <button className="btn btn-primary btn-outline">Home</button>
                         </Link>
                     </div>
+                    
                 </section>
             </div>
         </>

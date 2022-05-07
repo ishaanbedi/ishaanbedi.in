@@ -6,7 +6,9 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
 
-import { details } from '../components/data';
+import React from 'react';
+import Zoom from 'react-reveal/Zoom';
+
 import { metaDetails } from '../components/data';
 import Navbar from '../components/Navbar';
 export default function Home() {
@@ -19,15 +21,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
       </Head>
       <Navbar />
+        <Zoom left cascade>
       <div className={styles.container} >
-        <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
-          <Hero />
-          <About />
-          <Stack />
-          <Contact />
-          <Footer />
-        </section>
+          <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
+            <Hero />
+            <About />
+            <Stack />
+            <Contact />
+            <Footer />
+          </section>
       </div>
+        </Zoom>
     </>
   )
 }
