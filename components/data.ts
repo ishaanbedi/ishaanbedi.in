@@ -36,7 +36,7 @@ export const contactDetails = {
     github: "ishaanbedi",
     linkedin: "ishaanbedi13",
     youtube: "ishaanbedi",
-    twitter: "ishaaanbedi",
+    twitter: "ishnbedi",
     medium: "ishaanbedi"
 }
 
