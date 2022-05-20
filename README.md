@@ -18,13 +18,13 @@ Credit to the author is not at all mandatory, but is highly appreciated.
 Next.js, Tailwind CSS, Typescript, Vercel.
 
 ## How to install
-Download the repository and run 
+Download the repository, cd into it and run:
 ```
 npm install
 # or
 yarn add
 ```
-cd into the project and run the development server:
+Run the development server:
 
 ```bash
 npm run dev
