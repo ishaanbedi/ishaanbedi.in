@@ -34,7 +34,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the application by modifying `pages/index.js` & components. The page auto-updates as you'll edit the file.
+You can start editing the application by modifying `pages/index.tsx` & `components/data.ts` & various components inside the `components` folder. The page auto-updates as you'll edit the file.
 
 ## Deployment
 
