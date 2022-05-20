@@ -51,7 +51,7 @@ For support or queries, email me at hi@ishaanbedi.in
 
 ## Contributing
 
-Contributions are always welcome, wether in form of code, documentation, suggestions or even feedback.
+Contributions are always welcome, whether in form of code, documentation, suggestions or even feedback.
 
 
 
