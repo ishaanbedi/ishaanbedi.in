@@ -12,9 +12,7 @@ export default function About() {
                 </div>
 
                 <div>
-                    <div className="overflow-x-hidden mt-4 w-full">
-
-
+                    <div className="overflow-x-hidden mt-4 lg:w-96 md:w-96 sm:w-full">
                         <div className="w-full flex flex-wrap  -m-2">
                             {techStack.stack.map((item, index) => (
                                 <span
