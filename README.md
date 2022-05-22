@@ -11,7 +11,7 @@ Credit to the author is not at all mandatory, but is highly appreciated.
 
 ## Screenshot
 
-![App Screenshot](https://res.cloudinary.com/dhfhotfqs/image/upload/v1653067182/Github/Screenshot_2022-05-20_at_10.49.37_PM_p3ual0.png)
+![App Screenshot](https://res.cloudinary.com/dhfhotfqs/image/upload/v1653206628/Github/Screenshot_2022-05-22_at_1.33.20_PM_zxjrzw.png)
 
 ## 🛠 Technologies Used
 
