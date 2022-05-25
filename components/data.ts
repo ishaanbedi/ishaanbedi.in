@@ -4,8 +4,8 @@ export const details = {
 };
 
 export const metaDetails = {
-    title : "Ishaan Bedi",
-    description : "Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
+    title: "Ishaan Bedi",
+    description: "Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
 }
 
 export const about = {
@@ -15,18 +15,19 @@ export const about = {
 
 export const techStack = {
     title: 'My Stack',
+    description: 'Some of the technologies I use to build cool stuff:',
     stack:
         [
+            'Swift',
+            'SwiftUI',
             'HTML',
             'CSS',
             'JavaScript',
             'Typescript',
-            'Tailwind',
+            'Tailwind CSS',
             'React',
             'Next.js',
             'Git & Github',
-            'Swift',
-            'SwiftUI',
             'C & C++'
         ]
 };

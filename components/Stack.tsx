@@ -9,6 +9,11 @@ export default function About() {
                     >
                         {techStack.title}
                     </h1>
+                    <h3
+                        className="text-slate-400 mt-2"
+                    >
+                        {techStack.description}
+                    </h3>
                 </div>
 
                 <div>

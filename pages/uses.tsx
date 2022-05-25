@@ -14,7 +14,6 @@ export default function Uses() {
             </Head>
             <Navbar />
             <div className={styles.container} >
-
                 <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
                     <h1 className="lg:text-6xl text-3xl font-bold lg:mt-16 text-transparent bg-clip-text bg-gradient-to-br from-primary  to-secondary">Uses</h1>
                     <p className='my-4'>Check out this <a target={'_blank'} rel="noreferrer" className=' font-bold link text-primary link-hover underline-offset-4 hover:underline text-bold' href='https://uses.tech/'>site</a> for a comprehensive list of /uses pages.</p>

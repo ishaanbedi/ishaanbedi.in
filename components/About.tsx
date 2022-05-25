@@ -7,11 +7,13 @@ export default function About() {
             >
                 {about.title}
             </h1>
-            <h3
+            <div
                 className="text-slate-400 mt-4 "
             >
-                Hi, I am Ishaan &amp; I develop web applications.<br />
-            </h3>
+                <p>
+                    Into iOS &amp; Web Development. <br />Apple&apos;s Swift Student Challenge  &apos;22 Winner.
+                </p>
+            </div>
         </>
     )
 }
