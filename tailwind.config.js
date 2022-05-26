@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       'animation': {
-        'text': 'text 4s ease infinite',
+        'text': 'text 8s ease infinite',
       },
       'keyframes': {
         'text': {
