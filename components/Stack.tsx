@@ -5,7 +5,9 @@ export default function About() {
             <div>
                 <div className="overflow-x-hidden  w-full">
                     <h1
-                        className="mt-8 text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary pt-5 xl:text-3xl text-2xl font-bold"
+                        className="mt-8 bg-gradient-to-r bg-clip-text  text-transparent 
+                        from-blue-500 via-purple-500 to-cyan-500
+                        animate-text  pt-5 xl:text-3xl text-2xl font-bold"
                     >
                         {techStack.title}
                     </h1>
