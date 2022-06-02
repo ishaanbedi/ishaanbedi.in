@@ -20,6 +20,7 @@ export const techStack = {
         [
             'Swift',
             'SwiftUI',
+            'UIKit',
             'HTML',
             'CSS',
             'JavaScript',
