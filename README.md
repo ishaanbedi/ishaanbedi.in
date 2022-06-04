@@ -7,11 +7,6 @@ Portfolio website built with Next.js, Tailwind CSS, Typescript, hosted on Vercel
 
 This is a MIT licensed web application. You may fork/download this repository and modify and use it as your portfolio website. 
 
-Credit to the author is not at all mandatory, but is highly appreciated.
-
-## Screenshot
-
-![App Screenshot](https://res.cloudinary.com/dhfhotfqs/image/upload/v1653206628/Github/Screenshot_2022-05-22_at_1.33.20_PM_zxjrzw.png)
 
 ## 🛠 Technologies Used
 
