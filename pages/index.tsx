@@ -5,9 +5,7 @@ import Stack from '../components/Stack';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
-
 import { metaDetails } from '../components/data';
-import Navbar from '../components/Navbar';
 export default function Home() {
   return (
     <>
