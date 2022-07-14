@@ -10,7 +10,7 @@ export const metaDetails = {
 
 export const about = {
     title: "About me.",
-    description: "Hi, I am Ishaan, a 19-year-old student from New Delhi, India. I am develop apps for the Apple Ecosystem in Swift & SwiftUI.I also like working with web-technologies and developing web applications. I'm pursuing undergraduate engineering from MAIT, Delhi. I am also the winner of Apple's WWDC Swift Student Challenge 2022."
+    description: "Hi, I am Ishaan, a 19-year-old student from New Delhi, India. I develop apps for the Apple Ecosystem in Swift & SwiftUI. I like working with web-technologies and developing web applications. I'm pursuing undergraduate engineering from MAIT, Delhi. I am also the winner of Apple's WWDC Swift Student Challenge 2022."
 }
 
 export const techStack = {
