@@ -3,11 +3,10 @@ export default function About() {
     return (
         <>
             <div>
-                <div className="overflow-x-hidden  w-full">
+                <div className="w-full">
                     <h1
                         className="mt-8 bg-gradient-to-r bg-clip-text  text-transparent 
-                        from-blue-500 via-purple-500 to-cyan-500
-                        animate-text  pt-5 xl:text-3xl text-2xl font-bold"
+                        from-primary via-accent to-secondary pt-5 xl:text-3xl text-2xl font-bold"
                     >
                         {techStack.title}
                     </h1>
@@ -19,7 +18,7 @@ export default function About() {
                 </div>
 
                 <div>
-                    <div className="overflow-x-hidden mt-4 lg:w-96 md:w-96 sm:w-full">
+                    <div className="mt-4 lg:w-96 md:w-96 sm:w-full">
                         <div className="w-full flex flex-wrap  -m-2">
                             {techStack.stack.map((item, index) => (
                                 <span

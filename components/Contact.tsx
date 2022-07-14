@@ -18,15 +18,14 @@ export default function Contact() {
         <>
             <h1
                 className="bg-gradient-to-r bg-clip-text  text-transparent 
-                from-blue-500 via-purple-500 to-cyan-500
-                animate-text  pt-5 mt-10 xl:text-3xl text-2xl font-bold"
+                from-primary via-accent to-secondarypt-5 mt-10 xl:text-3xl text-2xl font-bold"
             >
                 Contact Me
             </h1>
             <h3
                 className="mt-4 text-slate-400"
             >
-                Reach me at <a href={sugarEmail} ><span className='text-gray-100 font-bold link link-hover underline-offset-4 hover:underline text-bold'>{contactDetails.email}</span></a>
+                Reach me at <a href={sugarEmail} ><span className='text-base-content font-bold link link-hover underline-offset-4 hover:underline text-bold'>{contactDetails.email}</span></a>
             </h3>
             <div className='mt-6'>
 
