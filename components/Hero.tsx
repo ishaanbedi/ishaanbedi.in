@@ -1,10 +1,6 @@
-import { details } from './data';
 import Image from 'next/image';
 import { BsGithub, BsTwitter, BsPencilSquare, BsLinkedin } from 'react-icons/bs';
 import Link from 'next/link';
-
-
-
 
 export default function Hero() {
     return (
@@ -27,17 +23,13 @@ export default function Hero() {
                     Developer from New Delhi, India.
                 </h3>
                 <div className="links flex lg:flex-row md:flex-row flex-col mx-2 my-8  justify-center ">
-
                     <Link href='https://github.com/ishaanbedi' passHref>
                         <button className="justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
                             <BsGithub />
                             github
                         </button>
                     </Link>
-
-
                     <Link href='https://www.linkedin.com/in/ishaanbedi13/' passHref>
-
                         <button className="justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
                             <BsLinkedin />
                             linkedin
@@ -48,15 +40,18 @@ export default function Hero() {
                             <BsTwitter />
                             twitter
                         </button>
-
                     </Link>
                 </div>
-                <h2
-                    className="pt-5 xl:text-3xl text-2xl font-bold"
-                >
-                    Recent Posts
-                </h2>
             </div>
+            <footer className="footer footer-center p-4 fixed bottom-0 text-sm inset-x-0 text-neutral-content">
+                <div>
+                    <p className="mt-2">
+                        Built with <span className='link link-hover text-info-content'><a href='https://www.nextjs.org/'>NextJS</a></span> & <span className='link link-hover text-info-content'><a href='https://www.tailwindcss.com/'>Tailwind</a></span> <br />Shipped with <span className='link link-hover text-info-content'><a href='https://www.vercel.com/'>Vercel</a></span>.
+                    </p>
+                </div>
+            </footer>
         </>
     )
 }
+
+

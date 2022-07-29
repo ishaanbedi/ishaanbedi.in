@@ -18,15 +18,13 @@ export const Post = ({ title, body, image }) => {
 
   return (
     <div>
-      <div>
-        {imageUrl && <img src={imageUrl} />}
-        <h1>{title}</h1>
-
-        <div>
+      <div className='flex flex-col items-center'>
+        <h1 className='text-3xl my-12 mx-2'>{title}</h1>
+        <div className='lg:mx-48 md:mx-32 mx-4 mb-12 mt-4'>
           <BlockContent blocks={body} />
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
