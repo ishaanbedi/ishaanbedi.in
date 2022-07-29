@@ -6,6 +6,8 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
 import { metaDetails } from '../components/data';
+import Link from 'next/link';
+import Navbar from '../components/Navbar';
 export default function Home() {
   return (
     <>
@@ -15,13 +17,13 @@ export default function Home() {
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
       </Head>
+
+      {/* NAVBAR */}
+      <Navbar />
+
       <div className={styles.container} >
-        <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
-          <Hero />
-          <About />
-          <Stack />
-          <Contact />
-          <Footer />
+        <section className='flex flex-col  items-center mt-7'>
+          <Hero/>
         </section>
       </div>
     </>

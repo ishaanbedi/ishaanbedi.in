@@ -17,8 +17,8 @@ export default function Contact() {
     return (
         <>
             <h1
-                className="bg-gradient-to-r bg-clip-text  text-transparent 
-                from-primary via-accent to-secondarypt-5 mt-10 xl:text-3xl text-2xl font-bold"
+                className="mt-8 bg-gradient-to-r bg-clip-text  text-transparent 
+                        from-primary to-secondary pt-5 xl:text-3xl text-2xl font-bold"
             >
                 Contact Me
             </h1>
