@@ -36,6 +36,7 @@ export default function Home({ posts }) {
                 </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
             </Head>
+
             <div className='flex flex-col items-center'>
                 <h3 className='text-3xl my-8 mx-2 text-info-content'>Recent posts I&apos;ve published.</h3>
                 <div className='flex flex-row flex-wrap'>

@@ -1,10 +1,10 @@
-import Image from 'next/image';
+
 import Head from 'next/head';
 import { useState } from 'react';
 
+
 export default function Contact() {
     const [show, setShow] = useState(false);
-
     return (
         <>
             <Head>
