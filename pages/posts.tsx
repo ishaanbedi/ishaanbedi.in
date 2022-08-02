@@ -37,14 +37,18 @@ export default function Home({ posts }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
             </Head>
 
-            <div className='flex flex-col items-center'>
-                <h3 className='text-3xl my-8 mx-2 text-info-content'>Recent posts I&apos;ve published.</h3>
-                <div className='flex flex-row flex-wrap'>
+            <div className="flex flex-col items-center">
+                <h3 className='text-3xl my-8 mx-2 text-white hover:text-info-content'>Recent posts I&apos;ve published.</h3>
+                <div className="posts-wrapper">
+
                     {mappedPosts.length ? mappedPosts.map((p, index) => (
-                        <div onClick={() => router.push(`/post/${p.slug.current}`)} key={index} className='mx-2 my-2 border-2 border-info-content hover:border-accent-content cursor-pointer p-2 text-center'>
-                            <img src={p.mainImage}  alt='Blog Image' />
-                            <h3 className='text-info-content font-semibold my-2'>{p.title}</h3>
-                        </div>
+
+                        <ul key={`blog_${index}`} className="menu p-2 rounded-box">
+                            <div onClick={() => router.push(`/post/${p.slug.current}`)} className='bg-base-200' key={index} >
+                                <li><a><h3 className=' my-2 hover:text-info-content font-semibold'>{p.title}</h3></a></li>
+
+                            </div>
+                        </ul>
                     )) : <>Error fetching posts! Please refresh the page.<br />If the error persists, please let me know at hi@ishaanbedi.in</>}
                 </div>
             </div>

@@ -2,7 +2,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 
 import BlockContent from '@sanity/block-content-to-react';
-
+import Head from 'next/head';
 
 export const Post = ({ title, body, image }) => {
   const [imageUrl, setImageUrl] = useState('');
@@ -18,13 +18,19 @@ export const Post = ({ title, body, image }) => {
 
   return (
     <div>
-      <div className='flex flex-col items-center'>
-        <h1 className='text-3xl my-12 mx-2'>{title}</h1>
-        <div className='lg:mx-48 md:mx-32 mx-4 mb-12 mt-4'>
+      <Head>
+        <title>
+          {title}
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+      </Head>
+      <div className='flex flex-col items-center p-4'>
+        <h1 className='text-3xl my-10'>{title}</h1>
+        <div className='flex lg:mx-48 md:mx-32 mx-2 my-4' >
           <BlockContent blocks={body} />
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

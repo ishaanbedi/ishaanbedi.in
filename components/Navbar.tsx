@@ -13,7 +13,7 @@ export default function NavBar() {
 
                         <h2 onClick={(e) => { setNavbar(false) }} className="text-2xl font-bold">
                             <Link passHref href='/'>
-                                <Image src={'/logo.png'} alt='Logo' height={50} width={50} />
+                                <Image src={'/logo.png'} alt='Logo' height={50} width={50} className='cursor-pointer' />
                             </Link>
                         </h2>
 
@@ -62,22 +62,22 @@ export default function NavBar() {
                             }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-
-                            <Link passHref href='/posts'>
-                                <li className="cursor-pointer hover:text-secondary">
+{/* 
+                            <Link passHref href='/coming-soon'>
+                                <li className="btn-ghost p-2 cursor-pointer">
                                     posts
                                 </li>
-                            </Link>
-                            <Link passHref href='/contact'>
-                                <li className="cursor-pointer hover:text-secondary">
+                            </Link> */}
+                            {/* <Link passHref href='/contact'>
+                                <li className="btn-ghost p-2 cursor-pointer">
                                     contact
                                 </li>
-                            </Link>
-                            <Link passHref href='/tweets'>
-                                <li className="cursor-pointer hover:text-secondary">
+                            </Link> */}
+                            {/* <Link passHref href='/coming-soon'>
+                                <li className="btn-ghost p-2 cursor-pointer">
                                     tweets
                                 </li>
-                            </Link>
+                            </Link> */}
                         </ul>
                     </div>
                 </div>
