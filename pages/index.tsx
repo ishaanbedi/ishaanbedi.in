@@ -2,10 +2,13 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import { BsGithub, BsTwitter, BsPencil, BsLinkedin } from 'react-icons/bs';
-import Link from 'next/link';
+
+import Link from 'next/link'
+import groq from 'groq'
 
 
-export default function Home() {
+
+export default function Home({ posts }) {
     return (
         <>
             <Head>
@@ -66,6 +69,7 @@ export default function Home() {
                     </div>
                 </section>
             </div>
+
         </>
     )
 }
