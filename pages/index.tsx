@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
-import { BsGithub, BsTwitter, BsPencil, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsTwitter, BsPencil, BsLinkedin, BsYoutube, BsMedium } from 'react-icons/bs';
 import Link from 'next/link';
 
 
@@ -16,8 +16,8 @@ export default function Home() {
             </Head>
 
             <div className={styles.container}>
-                <section className='flex flex-col my-7 items-center'>
-                    <div>
+                <section className='flex h-screen items-center'>
+                    <div className='m-auto'>
                         <div className='flex flex-col'>
                             <div className="avatar md:my-auto">
                                 <div className="fshadow-lg w-24 rounded-full ring ring-gray-500 hover:ring-info-content transition delay-150 duration-200 ease-in-out ring-offset-base-100 ring-offset-2">
@@ -54,17 +54,29 @@ export default function Home() {
                                         <p className='lg:flex md:flex hidden'>twitter</p>
                                     </a>
                                 </Link>
-                                {/* <Link href='/posts' passHref>
-                                    <button className="lg:rounded-md rounded-full cursor-pointer justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
-                                        <BsPencil />
-                                        <p className='lg:flex md:flex hidden'>posts</p>
-                                    </button>
-                                </Link> */}
+                                <Link href='https://youtube.com/ishnbedi' passHref>
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                        <BsYoutube />
+                                        <p className='lg:flex md:flex hidden'>youtube</p>
+                                    </a>
+                                </Link>
+                                <Link href='https://ishaanbedi.medium.com' passHref>
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                        <BsMedium />
+                                        <p className='lg:flex md:flex hidden'>medium</p>
+                                    </a>
+                                </Link>
                             </div>
-
                         </div>
                     </div>
                 </section>
+                <footer className="text-xs text-base-content footer-center p-10 bg-base-100 ">
+                    <div>
+                        <p className="mt-2">
+                            Built with <span className='link link-hover'><a href='https://www.nextjs.org/'>NextJS</a></span> & <span className='link link-hover'><a href='https://www.tailwindcss.com/'>Tailwind</a></span> <br />Shipped with <span className='link link-hover'><a href='https://www.vercel.com/'>Vercel</a></span>.
+                        </p>
+                    </div>
+                </footer>
             </div>
         </>
     )
