@@ -37,7 +37,7 @@ export default function Home() {
                             </h3>
                             <div className="links flex flex-row  lg:my-12 md:my-8 my-4  justify-center ">
                                 <Link href='https://github.com/ishaanbedi' passHref>
-                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 my-2">
                                         <BsGithub />
                                         <p className='lg:flex md:flex hidden'>github</p>
                                     </a>
@@ -54,14 +54,14 @@ export default function Home() {
                                         <p className='lg:flex md:flex hidden'>twitter</p>
                                     </a>
                                 </Link>
-                                <Link href='https://youtube.com/ishnbedi' passHref>
+                                <Link href='https://youtube.com/ishaanbedi' passHref>
                                     <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
                                         <BsYoutube />
                                         <p className='lg:flex md:flex hidden'>youtube</p>
                                     </a>
                                 </Link>
                                 <Link href='https://ishaanbedi.medium.com' passHref>
-                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 my-2">
                                         <BsMedium />
                                         <p className='lg:flex md:flex hidden'>medium</p>
                                     </a>
