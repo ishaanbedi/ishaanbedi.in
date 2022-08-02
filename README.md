@@ -54,3 +54,4 @@ Contributions are always welcome, whether in form of code, documentation, sugges
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 
+### Icons by Icons8

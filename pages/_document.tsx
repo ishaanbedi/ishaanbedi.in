@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { metaDetails } from '../components/data'
+
 class MyDocument extends Document {
     render() {
         return (
@@ -21,6 +22,7 @@ class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+                    {/* <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen" /> */}
                     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
                     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerPolicy="no-referrer-when-downgrade" /></noscript>
                 </Head>

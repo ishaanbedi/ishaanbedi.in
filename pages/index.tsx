@@ -1,29 +1,83 @@
 import Head from 'next/head';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Stack from '../components/Stack';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
-import { metaDetails } from '../components/data';
+import Image from 'next/image';
+import { BsGithub, BsTwitter, BsPencil, BsLinkedin, BsYoutube, BsMedium } from 'react-icons/bs';
+import Link from 'next/link';
+
+
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>
-          {metaDetails.title}
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
-      </Head>
-      <div className={styles.container} >
-        <section className='mt-7 lg:pl-3 max-w-4xl m-auto w-full'>
-          <Hero />
-          <About />
-          <Stack />
-          <Contact />
-          <Footer />
-        </section>
-      </div>
-    </>
-  )
+    return (
+        <>
+            <Head>
+                <title>
+                    Ishaan Bedi
+                </title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+            </Head>
+
+            <div className={styles.container}>
+                <section className='flex h-screen items-center'>
+                    <div className='m-auto'>
+                        <div className='flex flex-col'>
+                            <div className="avatar md:my-auto">
+                                <div className="fshadow-lg w-24 rounded-full ring ring-gray-500 hover:ring-info-content transition delay-150 duration-200 ease-in-out ring-offset-base-100 ring-offset-2">
+                                    <Image alt='Profile Image' width={100} height={100} src="/profile.jpeg" />
+                                </div>
+                            </div>
+                            <h1
+                                className="mt-8 xl:text-4xl md:text-4xl text-3xl font-bold text-white hover:text-info-content"
+                            >
+                                Ishaan Bedi
+                            </h1>
+
+                            <h3
+                                className="text-base-content my-6 lg:text-lg line leading-relaxed"
+                            >
+                                Hi, I am Ishaan, a 19-year-old student from New Delhi, India.<br />I develop apps for the <span className='text-info-content hover:underline underline-offset-4'>Apple Ecosystem</span> in Swift & SwiftUI.<br />Also, I like working with web-technologies and developing web applications.<br /> I am pursuing undergraduate engineering from <span className='text-info-content hover:underline underline-offset-4'>MAIT, Delhi.</span><br /> I am the winner of <Link passHref href='https://twitter.com/ishnbedi/status/1529122492475838464'><a target={'_blank'}><span className='text-info-content hover:underline underline-offset-4 cursor-ne-resize'>Apple&apos;s WWDC Swift Student Challenge 2022.</span></a></Link>
+                            </h3>
+                            <div className="links flex flex-row  mx-2 lg:my-12 md:my-8 my-4  justify-center ">
+                                <Link href='https://github.com/ishaanbedi' passHref>
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                        <BsGithub />
+                                        <p className='lg:flex md:flex hidden'>github</p>
+                                    </a>
+                                </Link>
+                                <Link href='https://www.linkedin.com/in/ishaanbedi13/' passHref>
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                        <BsLinkedin />
+                                        <p className='lg:flex md:flex hidden'>linkedin</p>
+                                    </a>
+                                </Link>
+                                <Link href='https://twitter.com/ishnbedi' passHref>
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                        <BsTwitter />
+                                        <p className='lg:flex md:flex hidden'>twitter</p>
+                                    </a>
+                                </Link>
+                                <Link href='https://youtube.com/ishnbedi' passHref>
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                        <BsYoutube />
+                                        <p className='lg:flex md:flex hidden'>youtube</p>
+                                    </a>
+                                </Link>
+                                <Link href='https://ishaanbedi.medium.com' passHref>
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                        <BsMedium />
+                                        <p className='lg:flex md:flex hidden'>medium</p>
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer className="text-xs text-base-content footer-center p-10 bg-base-100 ">
+                    <div>
+                        <p className="mt-2">
+                            Built with <span className='link link-hover'><a href='https://www.nextjs.org/'>NextJS</a></span> & <span className='link link-hover'><a href='https://www.tailwindcss.com/'>Tailwind</a></span> <br />Shipped with <span className='link link-hover'><a href='https://www.vercel.com/'>Vercel</a></span>.
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </>
+    )
 }
