@@ -35,7 +35,7 @@ export default function Home() {
                             >
                                 Hi, I am Ishaan, a 19-year-old student from New Delhi, India.<br />I develop apps for the <span className='text-info-content hover:underline underline-offset-4'>Apple Ecosystem</span> in Swift & SwiftUI.<br />Also, I like working with web-technologies and developing web applications.<br /> I am pursuing undergraduate engineering from <span className='text-info-content hover:underline underline-offset-4'>MAIT, Delhi.</span><br /> I am the winner of <Link passHref href='https://twitter.com/ishnbedi/status/1529122492475838464'><a target={'_blank'}><span className='text-info-content hover:underline underline-offset-4 cursor-ne-resize'>Apple&apos;s WWDC Swift Student Challenge 2022.</span></a></Link>
                             </h3>
-                            <div className="links flex flex-row  mx-2 lg:my-12 md:my-8 my-4  justify-center ">
+                            <div className="links flex flex-row  lg:my-12 md:my-8 my-4  justify-center ">
                                 <Link href='https://github.com/ishaanbedi' passHref>
                                     <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
                                         <BsGithub />
@@ -70,13 +70,6 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <footer className="text-xs text-base-content footer-center p-10 bg-base-100 ">
-                    <div>
-                        <p className="mt-2">
-                            Built with <span className='link link-hover'><a href='https://www.nextjs.org/'>NextJS</a></span> & <span className='link link-hover'><a href='https://www.tailwindcss.com/'>Tailwind</a></span> <br />Shipped with <span className='link link-hover'><a href='https://www.vercel.com/'>Vercel</a></span>.
-                        </p>
-                    </div>
-                </footer>
             </div>
         </>
     )
