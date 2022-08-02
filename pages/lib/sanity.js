@@ -57,7 +57,7 @@ const components = {
       </span>
     ),
     link: props => (
-      <a href={props?.value?.href} target="_blank" rel="noopener">
+      <a href={props?.value?.href} target="_blank" rel="noopener noreferrer">
         {props.children}
       </a>
     )
