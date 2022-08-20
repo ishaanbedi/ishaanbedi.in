@@ -18,7 +18,7 @@ export default function Home() {
                 <Announcement />
                 <section className='flex min-h-screen  items-center'>
                     <div className='m-auto'>
-                        <div className='flex flex-col'>
+                        <div className='flex flex-col mx-2'>
                             <div className="avatar md:my-auto">
                                 <div className="fshadow-lg w-24 rounded-full ring ring-gray-500 hover:ring-info-content transition delay-150 duration-200 ease-in-out ring-offset-base-100 ring-offset-2">
                                     <Image alt='Profile Image' width={100} height={100} src="/profile.jpeg" />
