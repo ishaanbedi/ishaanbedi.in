@@ -1,10 +1,15 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { BsGithub, BsTwitter, BsPencil, BsLinkedin, BsYoutube, BsMedium } from 'react-icons/bs';
+import { BsGithub, BsTwitter, BsLinkedin, BsYoutube, BsMedium } from 'react-icons/bs';
 import Link from 'next/link';
 import Announcement from '../components/Announcement';
-
+import { AnimatePresence, motion } from 'framer-motion'
 export default function Home() {
+    const config = {
+        type: "spring",
+        damping: 20,
+        stiffness: 100
+      };
     return (
         <>
             <Head>
@@ -13,8 +18,6 @@ export default function Home() {
                 </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
             </Head>
-
-            <div>
                 <Announcement />
                 <section className='flex min-h-screen  items-center'>
                     <div className='m-auto'>
@@ -24,12 +27,15 @@ export default function Home() {
                                     <Image alt='Profile Image' width={100} height={100} src="/profile.jpeg" />
                                 </div>
                             </div>
+
+
+
+
                             <h1
                                 className="mt-8 xl:text-4xl md:text-4xl text-3xl font-bold text-white hover:text-info-content"
                             >
                                 Ishaan Bedi
                             </h1>
-
                             <h3
                                 className="text-base-content my-6 lg:text-lg line leading-relaxed"
                             >
@@ -70,7 +76,6 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-            </div>
         </>
     )
 }
