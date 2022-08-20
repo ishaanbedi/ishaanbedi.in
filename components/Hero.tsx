@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { BsGithub, BsTwitter, BsPencilSquare, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsTwitter, BsLinkedin } from 'react-icons/bs';
 import Link from 'next/link';
-
 export default function Hero() {
     return (
         <>

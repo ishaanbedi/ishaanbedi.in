@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { metaDetails } from '../components/data'
-
+var metaDetails = {
+    title: "Ishaan Bedi",
+    description: "Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
+}
 class MyDocument extends Document {
     render() {
         return (

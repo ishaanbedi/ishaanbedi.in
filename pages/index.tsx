@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import { BsGithub, BsTwitter, BsPencil, BsLinkedin, BsYoutube, BsMedium } from 'react-icons/bs';
 import Link from 'next/link';
-
+import Announcement from '../components/Announcement';
 
 export default function Home() {
     return (
@@ -15,8 +14,9 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
             </Head>
 
-            <div className={styles.container}>
-                <section className='flex h-screen items-center'>
+            <div>
+                <Announcement />
+                <section className='flex min-h-screen  items-center'>
                     <div className='m-auto'>
                         <div className='flex flex-col'>
                             <div className="avatar md:my-auto">
@@ -37,31 +37,31 @@ export default function Home() {
                             </h3>
                             <div className="links flex flex-row  lg:my-12 md:my-8 my-4  justify-center ">
                                 <Link href='https://github.com/ishaanbedi' passHref>
-                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 my-2">
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn mx-2 gap-2 my-2">
                                         <BsGithub />
                                         <p className='lg:flex md:flex hidden'>github</p>
                                     </a>
                                 </Link>
                                 <Link href='https://www.linkedin.com/in/ishaanbedi13/' passHref>
-                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn mx-2 gap-2 my-2">
                                         <BsLinkedin />
                                         <p className='lg:flex md:flex hidden'>linkedin</p>
                                     </a>
                                 </Link>
                                 <Link href='https://twitter.com/ishnbedi' passHref>
-                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn mx-2 gap-2 my-2">
                                         <BsTwitter />
                                         <p className='lg:flex md:flex hidden'>twitter</p>
                                     </a>
                                 </Link>
                                 <Link href='https://youtube.com/ishaanbedi' passHref>
-                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 mx-2 my-2">
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn mx-2 gap-2 my-2">
                                         <BsYoutube />
                                         <p className='lg:flex md:flex hidden'>youtube</p>
                                     </a>
                                 </Link>
                                 <Link href='https://ishaanbedi.medium.com' passHref>
-                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn gap-2 my-2">
+                                    <a target={'_blank'} className="lg:rounded-md rounded-full cursor-ne-resize	 justify-around fill-secondary-content hover:fill-primary-content btn mx-2 gap-2 my-2">
                                         <BsMedium />
                                         <p className='lg:flex md:flex hidden'>medium</p>
                                     </a>
