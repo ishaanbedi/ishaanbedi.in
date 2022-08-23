@@ -5,18 +5,9 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
-}
-
-module.exports = nextConfig
-
-const STUDIO_REWRITE = {
-  source: "/studio/:path*",
-  destination:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3333/studio/:path*"
-      : "/studio/index.html",
+  images: {
+    domains: ["avatars.githubusercontent.com"],
+  },
 };
 
-module.exports = {
-  rewrites: () => [STUDIO_REWRITE],
-};
+module.exports = nextConfig;
