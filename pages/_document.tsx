@@ -7,7 +7,7 @@ var metaDetails = {
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="EN">
+      <Html>
         <Head>
           <meta name="title" content={metaDetails.title} />
           <meta name="description" content={metaDetails.description} />
@@ -46,7 +46,6 @@ class MyDocument extends Document {
             src="https://scripts.simpleanalyticscdn.com/latest.js"
           ></script>
           <noscript>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://queue.simpleanalyticscdn.com/noscript.gif"
               alt=""

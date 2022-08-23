@@ -4,7 +4,18 @@ import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
 import Announcement from "../components/Announcement";
 import axios from "axios";
-export default function Home({ userData }) {
+export const getStaticProps = async () => {
+  var data;
+  await axios
+    .get("https://63048372761a3bce77e93ebf.mockapi.io/ishaanbedi")
+    .then((e) => {
+      data = e.data[0];
+    });
+  return {
+    props: { userData: data },
+  };
+};
+function Home({ userData }) {
   return (
     <>
       <Head>
@@ -122,13 +133,4 @@ export default function Home({ userData }) {
     </>
   );
 }
-
-export const getStaticProps = async () => {
-  var data;
-  await axios.get("http://localhost:3000/api").then((e) => {
-    data = e.data;
-  });
-  return {
-    props: { userData: data },
-  };
-};
+export default Home;
