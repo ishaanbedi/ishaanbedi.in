@@ -14,7 +14,7 @@ import { IoLogoVercel } from "react-icons/io5";
 import Link from "next/link";
 import Head from "next/head";
 import { supabase } from "../utils/supabase";
-import Announcement from "../components/announcement";
+// import Announcement from "../components/announcement";
 const Index = (props) => {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
@@ -76,12 +76,12 @@ const Index = (props) => {
   if (!mounted) return null;
   return (
     <div className=" min-h-screen ">
-      <span className={props.announcement.isThere ? "" : "hidden"}>
+      {/* <span className={props.announcement.isThere ? "" : "hidden"}>
         <Announcement
           body={props.announcement.announcement}
           link={props.announcement.link}
         />
-      </span>
+      </span> */}
       <Head>
         <title>{props.name} | Developer</title>
         <meta
