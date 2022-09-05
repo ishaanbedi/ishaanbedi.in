@@ -9,16 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.35.6",
     "axios": "^0.27.2",
-    "daisyui": "^2.24.0",
     "framer-motion": "^7.2.0",
     "next": "12.1.5",
+    "next-themes": "^0.2.0",
     "nextjs-progressbar": "^0.0.14",
     "pageclip": "^1.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-icons": "^4.4.0",
-    "theme-change": "^2.0.2"
+    "theme-change": "^2.0.2",
+    "vercel": "^28.2.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.24",

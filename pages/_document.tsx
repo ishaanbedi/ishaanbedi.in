@@ -14,6 +14,7 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ishaanbedi.in/" />
           <meta property="og:title" content="Ishaan Bedi" />
+          
           <meta
             property="og:description"
             content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
@@ -37,7 +38,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+            href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
             rel="stylesheet"
           />
           <script
@@ -46,6 +47,7 @@ class MyDocument extends Document {
             src="https://scripts.simpleanalyticscdn.com/latest.js"
           ></script>
           <noscript>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://queue.simpleanalyticscdn.com/noscript.gif"
               alt=""
