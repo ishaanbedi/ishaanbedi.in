@@ -74,7 +74,6 @@ const Index = (props) => {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
-  console.log(props);
   return (
     <div className=" min-h-screen ">
       <span className={props.announcement.isThere ? "" : "hidden"}>
