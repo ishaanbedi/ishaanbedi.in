@@ -304,7 +304,7 @@ const Index = (props) => {
 };
 
 export default Index;
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const data = await supabase.from("me.ishaanbedi.in").select("*");
   var website_data = data.data[0].website_data;
   const image = await supabase.storage
