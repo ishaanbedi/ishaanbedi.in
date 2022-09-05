@@ -292,7 +292,7 @@ const Index = (props) => {
 
                 <p className="mt-4 text-sm text-center text-gray-500 dark:text-gray-400 lg:text-right lg:mt-0">
                   &copy; {new Date().getFullYear()} {props.name}.
-                  <br /> This is a MIT Licensed application.
+                  <br /> This is an MIT Licensed application.
                 </p>
               </div>
             </div>
