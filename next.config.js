@@ -5,6 +5,7 @@ const nextConfig = {
     domains: ["kcldtzblfykiwwltfouv.supabase.co"],
   },
   fallback: false,
+  optimizeFonts: false,
 };
 
 module.exports = nextConfig;
