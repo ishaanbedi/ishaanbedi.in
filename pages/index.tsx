@@ -4,7 +4,7 @@ import ProfileCard from "../components/ProfileCard";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Posts from "../components/Posts";
-import Footer from "../components/Footer.tsx";
+import Footer from "../components/Footer";
 import HeadTag from "../components/HeadTag";
 const Index = (props) => {
   return (
