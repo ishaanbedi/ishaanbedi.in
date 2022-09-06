@@ -13,7 +13,6 @@ const SocialLinks = (props) => {
     Twitter: { link: props.twitter, icon: <TwitterIcon key={1} /> },
     Medium: { link: props.medium, icon: <MediumIcon key={1} /> },
   };
-  console.log(Object.entries(handles));
   return (
     <div>
       <div className=" my-4 flex flex-row space-x-4 text-[#171717] dark:text-[#EDEDED]/90 lg:justify-start md:justify-start justify-center">
