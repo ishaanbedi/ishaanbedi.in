@@ -1665,10 +1665,10 @@
   "resolved" "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
   "version" "4.2.0"
 
-"framer-motion@^7.2.0":
-  "integrity" "sha512-D24ZHtbtdpiaByamNYiVXafVU6JfBxjrVlR1beyNupJL80haaDE23xS4dR0b/Qb64frtw/Mpdd9VYwSCv+UtSw=="
-  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-7.2.0.tgz"
-  "version" "7.2.0"
+"framer-motion@^7.2.1":
+  "integrity" "sha512-bt2ZqqGpPsW6UojYUa5poWQJu3sDr4Dp3IZsdVBYdKUJ8p+9PxOk1fYRAT8lTGGmaC5HFoKrbDXQeKWGAKZz9g=="
+  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-7.2.1.tgz"
+  "version" "7.2.1"
   dependencies:
     "@motionone/dom" "10.13.1"
     "framesync" "6.1.2"
