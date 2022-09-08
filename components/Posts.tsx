@@ -15,7 +15,18 @@ const Posts = (props) => {
         <div className="flex flex-col space-y-4 mt-4 lg:mx-0 md:mx-0 mx-2 ">
           {props.posts.map((e, i) => {
             return (
-              <motion.div whileHover={{ scale: 1.01 }} key={Number(i)}>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+                whileHover={{ scale: 1.01 }}
+                key={Number(i)}
+              >
                 <article className="ease-in duration-75 p-1 shadow-sm rounded-2xl ">
                   <div className="flex flex-col justify-end h-48 p-6 dark:bg-[#EDEDED]/10 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
                     <div className="mt-16">

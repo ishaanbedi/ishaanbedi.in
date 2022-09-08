@@ -14,7 +14,7 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ishaanbedi.in/" />
           <meta property="og:title" content="Ishaan Bedi" />
-          
+
           <meta
             property="og:description"
             content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India."

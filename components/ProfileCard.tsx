@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const ProfileCard = (props) => {
   return (
     <div>
-      <div className="mt-12 lg:grid md:grid md:grid-flow-col flex flex-col-reverse justify-center items-center gap-12">
+      <div className="mt-12 lg:grid md:grid grid-flow-col flex flex-col-reverse justify-center items-center gap-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
