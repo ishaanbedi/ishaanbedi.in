@@ -6,6 +6,7 @@ const nextConfig = {
   },
   fallback: false,
   optimizeFonts: false,
+  
 };
 
 module.exports = nextConfig;

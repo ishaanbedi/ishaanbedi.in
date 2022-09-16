@@ -8,7 +8,6 @@ const ProfileCard = (props) => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.01 }}
           transition={{ type: "spring", stiffness: 400, damping: 10, delay: 1 }}
         >
           <motion.h1 className=" lg:text-left md:text-left text-center text-3xl font-black text-[#171717] dark:text-[#EDEDED]">
@@ -22,7 +21,6 @@ const ProfileCard = (props) => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.01 }}
           transition={{
             type: "spring",
             stiffness: 400,

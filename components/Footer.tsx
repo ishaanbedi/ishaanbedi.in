@@ -9,17 +9,7 @@ import { motion } from "framer-motion";
 const Footer = (props) => {
   return (
     <footer>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0 },
-        }}
-        whileHover={{ scale: 1.01 }}
-      >
+      <motion.div whileHover={{ scale: 1.01 }}>
         <div className="px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">
             <div className="flex justify-center text-gray-500 dark:text-gray-400 sm:justify-start">
