@@ -8,12 +8,11 @@ const ProfileCard = (props) => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10, delay: 1 }}
         >
-          <motion.h1 className=" lg:text-left md:text-left text-center text-3xl font-black text-[#171717] dark:text-[#EDEDED]">
+          <motion.h1 className=" lg:text-left md:text-left text-center text-3xl font-black text-[#171717] dark:text-[#E6E6E6]/90">
             Hello, I am {props.name}.
           </motion.h1>
-          <p className="my-4 text-lg text-[#222831] dark:text-[#EDEDED]/90">
+          <p className="my-4 text-lg text-[#151515] dark:text-[#E6E6E6]/70">
             {props.about}
           </p>
         </motion.div>
@@ -21,12 +20,6 @@ const ProfileCard = (props) => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 400,
-            damping: 10,
-            delay: 1.2,
-          }}
         >
           <Image
             src={props.image}

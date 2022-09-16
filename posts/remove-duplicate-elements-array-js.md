@@ -1,5 +1,5 @@
 ---
-title: "Remove Duplicate Elements From An Array in Javascript With Just a Single Line Of Code!"
+title: "Remove Duplicate Elements From An Array in Javascript!"
 metaTitle: "Remove Duplicate Elements From An Array in Javascript With Just a Single Line Of Code!"
 metaDesc: "Super simple trick that can be used to remove duplicate elements from an array in Javascript."
 date: "2022-01-28"

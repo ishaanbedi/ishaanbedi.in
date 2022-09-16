@@ -23,6 +23,7 @@ const BlogPage = ({ frontmatter, content, slug }) => {
         />
       </Head>
       <Header />
+      <div className=" mx-2">
       <h1 className="lg:text-5xl text-xl lg:my-12 md:my-8 my-6 font-black">
         {frontmatter.title}
       </h1>
@@ -32,7 +33,7 @@ const BlogPage = ({ frontmatter, content, slug }) => {
           month: "long",
           day: "numeric",
         })}
-        {" • "} {readingTime(content)} minutes read.
+        {" • "} {readingTime(content)} min read.
       </p>
 
       <p className="mt-8">{frontmatter.excerpt}</p>
@@ -61,6 +62,7 @@ const BlogPage = ({ frontmatter, content, slug }) => {
           <span className="ml-2 mt-1">Share via Email</span>
         </a>
       </p>
+    </div>
     </div>
   );
 };

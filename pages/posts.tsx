@@ -17,7 +17,11 @@ const IndexPage = ({ posts }) => {
       <Header />
 
       <main className="mb-24 mt-4">
-        <h1 className="lg:text-xl md:text-xl text-md text-center font-bold my-4">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-4xl font-black text-center">Posts</h1>
+        </div>
+
+        <h1 className="lg:text-xl md:text-xl text-md text-center font-semibold my-4">
           I&apos;ve written {posts.length} posts in total, revolving around
           programming, tech, and life.
         </h1>
@@ -26,14 +30,14 @@ const IndexPage = ({ posts }) => {
           <div key={post.slug}>
             <Link passHref href={`/post/${post.slug}`}>
               <article className="ease-in duration-150 hover:scale-105 cursor-pointer p-1 shadow-sm rounded-2xl ">
-                <div className="flex flex-col justify-end lg:h-48 md:lg:h-48 h-44 p-6 dark:bg-[#EDEDED]/10 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
+                <div className="flex flex-col justify-end lg:h-48 md:lg:h-48 h-44 p-6 dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
                   <div className="mt-16">
                     <p className="text-left lg:hidden md:hidden flex  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
                       {new Date().getMonth() -
                         post.frontmatter.date.slice(5, 7)}{" "}
                       months ago
                     </p>
-                    <h5 className="text-left mt-2 lg:text-xl md:text-xl text-md font-bold dark:text-white">
+                    <h5 className="text-left mt-2 lg:text-xl md:text-xl text-md font-bold dark:text-[#E6E6E6]">
                       {post.frontmatter.title}
                     </h5>
                     <p className="text-left lg:flex md:flex hidden  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
@@ -45,7 +49,7 @@ const IndexPage = ({ posts }) => {
                         {post.frontmatter.tags.map((item, id) => {
                           return (
                             <span key={id}>
-                              <li className="inline-block rounded-full text-white text-xs font-medium px-3 py-1.5 dark:bg-[#222831] bg-[#222831]/50">
+                              <li className="inline-block rounded-full text-[#E6E6E6] text-xs font-medium px-3 py-1.5 dark:bg-[#151515] bg-[#151515]/50">
                                 #{item}
                               </li>
                             </span>
@@ -86,8 +90,9 @@ export const getStaticProps = async () => {
   return {
     props: {
       posts: posts.sort(
-        (e1, e2) =>
-          new Date(e2.frontmatter.date) - new Date(e1.frontmatter.date)
+        (a, b) =>
+          Number(new Date(b.frontmatter.date)) -
+          Number(new Date(a.frontmatter.date))
       ),
     },
   };

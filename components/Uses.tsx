@@ -47,7 +47,7 @@ const Uses = () => {
       XCode: <SiXcode />,
     },
 
-    "deployment & hosting": {
+    "deployment & backend": {
       Vercel: <SiVercel />,
       Supabase: <SiSupabase />,
     },
@@ -77,13 +77,14 @@ const Uses = () => {
               </h2>
               <div className="flex">
                 {Object.entries(skills[skill]).map((e, i) => {
+                  var tech: any = e[1];
                   return (
                     <a
                       key={i}
-                      className=" transition  group dark:hover:bg-[#EDEDED]/10 hover:bg-gray-200 text-[#171717] dark:text-[#EDEDED] mx-1 relative flex flex-col items-center justify-center w-full h-32  rounded-sm border dark:border-gray-200 border-gray-800"
+                      className=" transition  group lg:dark:hover:bg-[#E6E6E6]/10 lg:hover:bg-gray-200 text-[#171717] dark:text-[#E6E6E6] mx-1 relative flex flex-col items-center justify-center w-full h-32  rounded-sm border dark:border-zinc-800 border-zinc-400"
                     >
                       <span className=" lg:group-hover:opacity-0 lg:group-hover:absolute text-3xl ">
-                        {e[1]}
+                        {tech}
                       </span>
                       <div className="absolute p-8 opacity-0 lg:group-hover:relative lg:group-hover:opacity-100">
                         <p className="mt-1 text-lg">{e[0]}</p>

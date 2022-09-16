@@ -55,7 +55,6 @@ const Header = () => {
             className=" text-[#737373]"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +82,6 @@ const Header = () => {
             className="text-[#737373]"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -125,16 +123,15 @@ const Header = () => {
             </motion.div>
           </Link>
 
-          <div className="justify-end  space-x-4 sm:flex">
-            {renderThemeChanger()}
+          <div className="justify-end flex flex-row space-x-4 sm:flex">
+            <div className="mt-2">{renderThemeChanger()}</div>
             <motion.button
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
               onClick={() => {
                 setOpenNav(true);
               }}
-              className="text-[#737373]"
+              className="text-[#737373] focus:border-none mr-1"
             >
               <BsCommand />
             </motion.button>
@@ -146,7 +143,7 @@ const Header = () => {
           <>
             <div className=" justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                <div className=" w-72 border-0 rounded-lg relative flex flex-col shadow-2xl bg-zinc-700 outline-none focus:outline-none">
+                <div className=" w-72 rounded-lg relative flex flex-col bg-black border-2 outline-none focus:outline-none">
                   <nav className="flex flex-col space-y-1">
                     {navLinks.map((link) => (
                       <Link href={link.link} key={link.label} passHref>
@@ -154,8 +151,8 @@ const Header = () => {
                           className={
                             router.pathname.slice(1).toLowerCase() !==
                             link.label.toLowerCase()
-                              ? "flex items-center px-4 py-2 text-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
-                              : "flex items-center px-4 py-2 rounded-lg bg-gray-100 text-gray-700"
+                              ? "flex items-center px-4 py-2 text-gray-300  hover:bg-gray-100 hover:text-gray-700"
+                              : "flex items-center px-4 py-2  bg-gray-100 text-gray-700"
                           }
                         >
                           <span className="ml-3 text-lg font-medium">
@@ -168,7 +165,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="opacity-50 fixed inset-0 z-40 bg-black"></div>
+            <div className="opacity-90 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
       </>

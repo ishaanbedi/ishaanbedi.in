@@ -2,9 +2,9 @@ import SocialLink from "../components/SocialLink";
 import ProfileCard from "../components/ProfileCard";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
-import Posts from "../components/Posts";
 import Footer from "../components/Footer";
 import HeadTag from "../components/HeadTag";
+
 
 const Index = () => {
   let data = {
@@ -38,38 +38,7 @@ const Index = () => {
         github: "https://github.com/ishaanbedi/ishaanbedi.in",
       },
     ],
-    posts: [
-      {
-        title: "Breaking down George Pólya’s methods of problem-solving.",
-        link: "https://ishaanbedi.medium.com/breaking-down-george-p%C3%B3lyas-methods-of-problem-solving-2dc0ba94ef79",
-        platform: "Medium",
-      },
-      {
-        title: "Make your own calculator in HTML, CSS, JAVASCRIPT",
-        link: "https://medium.com/swlh/make-your-own-calculator-in-html-css-javascript-1319dd93a742",
-        platform: "Medium",
-      },
-      {
-        title: "Understanding Variables in Swift",
-        link: "https://tealfeed.com/understanding-variables-swift-i32po",
-        platform: "Tealfeed",
-      },
-      {
-        title: "Understanding Constants in Swift",
-        link: "https://tealfeed.com/understanding-constants-swift-0mbpz",
-        platform: "Tealfeed",
-      },
-      {
-        title: "Understanding Strings in Swift",
-        link: "https://tealfeed.com/understanding-strings-swift-pbhbw",
-        platform: "Tealfeed",
-      },
-      {
-        title: "String Interpolation in Swift",
-        link: "https://tealfeed.com/string-interpolation-swift-zw7tc",
-        platform: "Tealfeed",
-      },
-    ],
+
     image:
       "https://kcldtzblfykiwwltfouv.supabase.co/storage/v1/object/public/profile-image/profile",
   };
@@ -92,7 +61,6 @@ const Index = () => {
           medium={data.medium}
         />
         <Projects projects={data.projects} />
-        <Posts posts={data.posts} />
       </main>
       <Footer name="Ishaan Bedi" />
     </div>

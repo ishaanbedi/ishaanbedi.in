@@ -15,7 +15,7 @@ const SocialLinks = (props) => {
   };
   return (
     <div>
-      <div className=" my-4 flex flex-row space-x-4 text-[#171717] dark:text-[#EDEDED]/90 lg:justify-start md:justify-start justify-center">
+      <div className=" my-4 flex flex-row space-x-4 text-[#171717] dark:text-[#E6E6E6]/90 lg:justify-start md:justify-start justify-center">
         {Object.entries(handles).map((e, i) => {
           return (
             <motion.div
@@ -23,17 +23,11 @@ const SocialLinks = (props) => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.01 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 10,
-                delay: i / 10 + 1.4,
-              }}
             >
               <Link passHref href={`${e[1].link}`}>
                 <a
                   target={"_blank"}
-                  className="inline-block p-3 border  dark:border-[#EDEDED]/90 border-[#171717] hover:bg-[#EDEDED]/90 hover:text-[#171717] rounded-full focus:outline-none focus:ring"
+                  className="inline-block p-3 border  dark:border-[#E6E6E6]/90 border-[#171717] hover:bg-[#E6E6E6]/90 hover:text-[#171717] rounded-full focus:outline-none focus:ring"
                 >
                   {e[1].icon}
                 </a>
