@@ -1,5 +1,5 @@
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiSupabase } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 
 import Link from "next/link";
@@ -37,6 +37,15 @@ const Footer = (props) => {
                   className=" cursor-pointer mt-[2px] mx-1 hover:text-[#F05454]"
                 >
                   <IoLogoVercel />
+                </a>
+              </Link>
+              &amp;{" "}
+              <Link passHref href="https://www.supabase.com/">
+                <a
+                  target={"_blank"}
+                  className=" cursor-pointer mt-[2px] mx-1 hover:text-[#F05454]"
+                >
+                  <SiSupabase />
                 </a>
               </Link>
             </div>

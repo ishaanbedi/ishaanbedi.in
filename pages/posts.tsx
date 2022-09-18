@@ -1,10 +1,9 @@
 import Header from "../components/Header";
-import fs from "fs";
-import matter from "gray-matter";
 import Link from "next/link";
 import Head from "next/head";
+import supabase from "../utils/supabaseClient";
 
-const IndexPage = ({ posts }) => {
+const IndexPage = ({ posts, data }) => {
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -22,31 +21,29 @@ const IndexPage = ({ posts }) => {
         </div>
 
         <h1 className="lg:text-xl md:text-xl text-md text-center font-semibold my-4">
-          I&apos;ve written {posts.length} posts in total, revolving around
+          I&apos;ve written {data.length} posts in total, revolving around
           programming, tech, and life.
         </h1>
 
-        {posts.map((post) => (
-          <div key={post.slug}>
-            <Link passHref href={`/post/${post.slug}`}>
+        {data.map((data) => (
+          <div key={data.slug}>
+            <Link passHref href={`/post/${data.slug}`}>
               <article className="ease-in duration-150 hover:scale-105 cursor-pointer p-1 shadow-sm rounded-2xl ">
                 <div className="flex flex-col justify-end lg:h-48 md:lg:h-48 h-44 p-6 dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
                   <div className="mt-16">
                     <p className="text-left lg:hidden md:hidden flex  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
-                      {new Date().getMonth() -
-                        post.frontmatter.date.slice(5, 7)}{" "}
-                      months ago
+                      {new Date().getMonth() - data.date.slice(5, 7)} months ago
                     </p>
                     <h5 className="text-left mt-2 lg:text-xl md:text-xl text-md font-bold dark:text-[#E6E6E6]">
-                      {post.frontmatter.title}
+                      {data.title}
                     </h5>
                     <p className="text-left lg:flex md:flex hidden  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
-                      {post.frontmatter.metaDesc}
+                      {data.metaDesc}
                     </p>
 
                     <div className="flex flex-wrap items-center lg:justify-between md:justify-between justify-center mt-6">
                       <ul className="flex  space-x-1">
-                        {post.frontmatter.tags.map((item, id) => {
+                        {data.tags.map((item, id) => {
                           return (
                             <span key={id}>
                               <li className="inline-block rounded-full text-[#E6E6E6] text-xs font-medium px-3 py-1.5 dark:bg-[#151515] bg-[#151515]/50">
@@ -58,9 +55,8 @@ const IndexPage = ({ posts }) => {
                       </ul>
 
                       <p className="text-left lg:flex md:flex hidden  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
-                        {new Date().getMonth() -
-                          post.frontmatter.date.slice(5, 7)}{" "}
-                        months ago
+                        {new Date().getMonth() - data.date.slice(5, 7)} months
+                        ago
                       </p>
                     </div>
                   </div>
@@ -76,23 +72,14 @@ const IndexPage = ({ posts }) => {
 
 export default IndexPage;
 export const getStaticProps = async () => {
-  const files = fs.readdirSync("posts");
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-    const readFile = fs.readFileSync(`posts/${filename}`, "utf-8");
-    const { data: frontmatter } = matter(readFile);
-    return {
-      slug,
-      frontmatter,
-    };
-  });
-
+  const data = await supabase
+    .from("blog.ishaanbedi.in")
+    .select("*")
+    .order("id");
   return {
     props: {
-      posts: posts.sort(
-        (a, b) =>
-          Number(new Date(b.frontmatter.date)) -
-          Number(new Date(a.frontmatter.date))
+      data: data.data.sort(
+        (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
       ),
     },
   };

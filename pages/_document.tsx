@@ -55,7 +55,7 @@ class MyDocument extends Document {
             />
           </noscript>
         </Head>
-        <body>
+        <body className="selection:text-[#F05454] selection:bg-gray-900">
           <Main />
           <NextScript />
         </body>
