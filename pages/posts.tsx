@@ -2,8 +2,7 @@ import Header from "../components/Header";
 import Link from "next/link";
 import Head from "next/head";
 import supabase from "../utils/supabaseClient";
-
-const IndexPage = ({ posts, data }) => {
+const PostsPage = ({ data }) => {
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -14,17 +13,14 @@ const IndexPage = ({ posts, data }) => {
         />
       </Head>
       <Header />
-
       <main className="mb-24 mt-4">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-4xl font-black text-center">Posts</h1>
         </div>
-
         <h1 className="lg:text-xl md:text-xl text-md text-center font-semibold my-4">
           I&apos;ve written {data.length} posts in total, revolving around
           programming, tech, and life.
         </h1>
-
         {data.map((data) => (
           <div key={data.slug}>
             <Link passHref href={`/post/${data.slug}`}>
@@ -57,6 +53,11 @@ const IndexPage = ({ posts, data }) => {
                       <p className="text-left lg:flex md:flex hidden  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
                         {new Date().getMonth() - data.date.slice(5, 7)} months
                         ago
+                        {" • "}
+                        {data.views
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        Views
                       </p>
                     </div>
                   </div>
@@ -69,9 +70,8 @@ const IndexPage = ({ posts, data }) => {
     </div>
   );
 };
-
-export default IndexPage;
-export const getStaticProps = async () => {
+export default PostsPage;
+export async function getStaticProps() {
   const data = await supabase
     .from("blog.ishaanbedi.in")
     .select("*")
@@ -82,5 +82,6 @@ export const getStaticProps = async () => {
         (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
       ),
     },
+    revalidate: 30,
   };
-};
+}

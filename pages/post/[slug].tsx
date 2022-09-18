@@ -4,6 +4,7 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import { BsTwitter } from "react-icons/bs";
 import supabase from "../../utils/supabaseClient";
+import { useEffect } from "react";
 
 const BlogPage = ({ content, slug, post }) => {
   function readingTime(content) {
@@ -13,6 +14,16 @@ const BlogPage = ({ content, slug, post }) => {
     const time = Math.ceil(words / wpm);
     return time;
   }
+  useEffect(() => {
+    async function updateViews() {
+      const { data, error } = await supabase
+        .from("blog.ishaanbedi.in")
+        .update({ views: post.data.views + 1 })
+        .match({ slug: slug });
+    }
+    updateViews();
+  }, []);
+
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
