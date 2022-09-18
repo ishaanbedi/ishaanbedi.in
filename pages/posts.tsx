@@ -57,7 +57,7 @@ const PostsPage = ({ data }) => {
                         {data.views
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                        Views
+                        {" "}Views
                       </p>
                     </div>
                   </div>
