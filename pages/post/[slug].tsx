@@ -34,6 +34,7 @@ const BlogPage = ({ content, slug, post }) => {
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} Views | ${readingTime(
     post.data.data
   )} min read..png?theme=dark&md=1&fontSize=50px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0`;
+  console.log(ogImage);
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -49,6 +50,8 @@ const BlogPage = ({ content, slug, post }) => {
         <meta property="og:type" content="Post" />
         <meta property="og:url" content="http://www.ishaanbedi.in/posts" />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="2048" />
+        <meta property="og:image:height" content="1170" />
       </Head>
       <Header />
       <div className=" mx-2">
