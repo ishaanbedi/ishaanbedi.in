@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import HeadTag from "../components/HeadTag";
 
 
+
+
 const Index = () => {
   let data = {
     github: "https://github.com/ishaanbedi",
@@ -42,6 +44,7 @@ const Index = () => {
     image:
       "https://kcldtzblfykiwwltfouv.supabase.co/storage/v1/object/public/profile-image/profile",
   };
+
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <HeadTag name="Ishaan Bedi" />

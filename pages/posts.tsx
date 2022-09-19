@@ -25,10 +25,15 @@ const PostsPage = ({ data }) => {
           <div key={data.slug}>
             <Link passHref href={`/post/${data.slug}`}>
               <article className="ease-in duration-150 hover:scale-105 cursor-pointer p-1 shadow-sm rounded-2xl ">
-                <div className="flex flex-col justify-end lg:h-48 md:lg:h-48 h-44 p-6 dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
+                <div className="flex flex-col justify-end  p-6 dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
                   <div className="mt-16">
                     <p className="text-left lg:hidden md:hidden flex  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
                       {new Date().getMonth() - data.date.slice(5, 7)} months ago
+                      {" • "}
+                      {data.views
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                      Views
                     </p>
                     <h5 className="text-left mt-2 lg:text-xl md:text-xl text-md font-bold dark:text-[#E6E6E6]">
                       {data.title}
@@ -56,8 +61,8 @@ const PostsPage = ({ data }) => {
                         {" • "}
                         {data.views
                           .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                        {" "}Views
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                        Views
                       </p>
                     </div>
                   </div>
