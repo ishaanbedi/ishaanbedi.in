@@ -23,7 +23,17 @@ const BlogPage = ({ content, slug, post }) => {
     }
     updateViews();
   }, []);
-
+  var ogImage = `https://og-image.vercel.app/**_${
+    post.data.title
+  }_** <br/> ${new Date(post.data.date).toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })} | ${post.data.views
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} Views | ${readingTime(
+    post.data.data
+  )} min read..png?theme=dark&md=1&fontSize=50px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0`;
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -32,6 +42,13 @@ const BlogPage = ({ content, slug, post }) => {
           name="viewport"
           content="initial-scale=1.0, width=device-width user-scalable=no "
         />
+        <meta name="description" content={post.data.metaDesc} />
+        <meta property="og:title" content={post.data.title} />
+        <meta property="og:description" content={post.data.metaDesc} />
+        <meta property="og:site_name" content="Ishaan's Blog" />
+        <meta property="og:type" content="Post" />
+        <meta property="og:url" content="http://www.ishaanbedi.in/posts" />
+        <meta property="og:image" content={ogImage} />
       </Head>
       <Header />
       <div className=" mx-2">
