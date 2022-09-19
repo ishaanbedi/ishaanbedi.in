@@ -19,7 +19,6 @@ class MyDocument extends Document {
             property="og:description"
             content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
           />
-          <meta property="og:image" content="/meta.png" />
           <meta
             name="google-site-verification"
             content="yEAyX24NQpFNFN9tBd3Isct51jdK8humRcf_OhTCVlg"
