@@ -64,6 +64,14 @@ const Index = () => {
           name="google-site-verification"
           content="yEAyX24NQpFNFN9tBd3Isct51jdK8humRcf_OhTCVlg"
         />
+        <meta
+          property="og:description"
+          content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
+        />
+        <meta
+          name="google-site-verification"
+          content="yEAyX24NQpFNFN9tBd3Isct51jdK8humRcf_OhTCVlg"
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://ishaanbedi.in/" />
         <meta property="twitter:title" content="Ishaan Bedi" />
