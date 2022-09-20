@@ -122,6 +122,7 @@ export const getServerSideProps = async ({ params: { slug } }) => {
     .eq("slug", slug)
     .single();
   const { data: frontmatter, content } = matter(post.data.data);
+
   return {
     props: {
       post,

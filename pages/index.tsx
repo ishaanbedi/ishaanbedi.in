@@ -19,7 +19,7 @@ const Index = () => {
     projects: [
       {
         web: "https://supatype.vercel.app/",
-        name: "SupaType: Unlimited Online Typing Tests",
+        name: "SupaType: Unlimited Typing Tests",
         tech: ["Next.js", "TailwindCSS", "Supabase", "Web"],
         github: "https://github.com/ishaanbedi/supatype",
       },

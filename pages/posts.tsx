@@ -28,7 +28,21 @@ const PostsPage = ({ data }) => {
                 <div className="flex flex-col justify-end  p-6 dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
                   <div className="mt-16">
                     <p className="text-left lg:hidden md:hidden flex  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
-                      {new Date().getMonth() - data.date.slice(5, 7)} months ago
+                      {Number(data.date.slice(0, 4)) < new Date().getFullYear()
+                        ? `${
+                            -Number(data.date.slice(0, 4)) +
+                            new Date().getFullYear()
+                          } 
+                            ${
+                              -Number(data.date.slice(0, 4)) +
+                                new Date().getFullYear() >
+                              1
+                                ? "years"
+                                : "year"
+                            } ago`
+                        : `${
+                            new Date().getMonth() - data.date.slice(5, 7)
+                          } months ago`}
                       {" • "}
                       {data.views
                         .toString()
@@ -56,8 +70,22 @@ const PostsPage = ({ data }) => {
                       </ul>
 
                       <p className="text-left lg:flex md:flex hidden  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
-                        {new Date().getMonth() - data.date.slice(5, 7)} months
-                        ago
+                        {Number(data.date.slice(0, 4)) <
+                        new Date().getFullYear()
+                          ? `${
+                              -Number(data.date.slice(0, 4)) +
+                              new Date().getFullYear()
+                            } 
+                            ${
+                              -Number(data.date.slice(0, 4)) +
+                                new Date().getFullYear() >
+                              1
+                                ? "years"
+                                : "year"
+                            } ago`
+                          : `${
+                              new Date().getMonth() - data.date.slice(5, 7)
+                            } months ago`}
                         {" • "}
                         {data.views
                           .toString()
@@ -77,13 +105,13 @@ const PostsPage = ({ data }) => {
 };
 export default PostsPage;
 export async function getStaticProps() {
-  const data = await supabase
+  const { data, error } = await supabase
     .from("blog.ishaanbedi.in")
     .select("*")
     .order("id");
   return {
     props: {
-      data: data.data.sort(
+      data: { data }.data.sort(
         (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
       ),
     },

@@ -143,7 +143,7 @@ const Header = () => {
           <>
             <div className=" justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                <div className=" w-72 rounded-lg relative flex flex-col bg-black border-2 outline-none focus:outline-none">
+                <div className=" w-72 rounded-lg relative flex flex-col backdrop-blur-xl bg-black  border-2 outline-none focus:outline-none">
                   <nav className="flex flex-col space-y-1">
                     {navLinks.map((link) => (
                       <Link href={link.link} key={link.label} passHref>
@@ -165,7 +165,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="opacity-90 fixed inset-0 z-40 bg-black"></div>
+            <div className="fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
       </>

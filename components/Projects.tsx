@@ -12,18 +12,18 @@ const Projects = (props) => {
         <h2 className="text-2xl font-black text-center text-[#E6E6E6]">
           Featured Projects
         </h2>
-        <div className="flex flex-col space-y-4 mt-4 lg:mx-0 md:mx-0 mx-2 ">
+        <div className="grid lg:md:grid-cols-2 grid-cols-1 mt-4 lg:mx-0 md:mx-0 mx-2 ">
           {props.projects.map((e, i) => {
             return (
               <motion.div whileHover={{ scale: 1.01 }} key={Number(i)}>
                 <article className="ease-in duration-75 p-1 shadow-sm rounded-2xl">
-                  <div className="flex flex-col justify-end h-48 p-6 dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90">
-                    <div className="mt-16">
-                      <h5 className="lg:text-left md:text-left text-center mt-2 lg:text-xl md:text-xl text-md font-bold dark:text-[#E6E6E6]">
+                  <div className="flex flex-col justify-end  dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90 py-12">
+                    <div className="my-auto">
+                      <h5 className="lg:text-left md:text-left text-center lg:text-xl md:text-xl text-md font-bold dark:text-[#E6E6E6]">
                         {e.name}
                       </h5>
-                      <div className="flex flex-wrap items-center lg:justify-between md:justify-between justify-center mt-6">
-                        <div className="space-x-2 items-center justify-center">
+                      <div className="flex flex-wrap items-center lg:justify-between md:justify-between justify-center ">
+                        <div className="space-x-2 items-center justify-center mt-8">
                           <Link passHref href={`${e.github}`}>
                             <a
                               target={"_blank"}
@@ -45,18 +45,6 @@ const Projects = (props) => {
                             </Link>
                           </span>
                         </div>
-
-                        <ul className="lg:flex md:flex hidden space-x-1">
-                          {e.tech.map((tech, id) => {
-                            return (
-                              <span key={id}>
-                                <li className="inline-block rounded-full text-[#E6E6E6]/90 text-xs font-medium px-3 py-1.5 dark:bg-[#151515] bg-[#151515]/50">
-                                  #{tech}
-                                </li>
-                              </span>
-                            );
-                          })}
-                        </ul>
                       </div>
                     </div>
                   </div>
