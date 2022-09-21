@@ -2,6 +2,12 @@ import Header from "../components/Header";
 import Link from "next/link";
 import Head from "next/head";
 import supabase from "../utils/supabaseClient";
+import { NextSeo } from "next-seo";
+const metaDetails = {
+  title: "Posts | Ishaan Bedi",
+  description: "Blog posts by Ishaan Bedi.",
+  url: "https://www.ishaanbedi.in/posts",
+};
 const PostsPage = ({ data }) => {
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
@@ -10,6 +16,31 @@ const PostsPage = ({ data }) => {
         <meta
           name="viewport"
           content="initial-scale=1.0, width=device-width user-scalable=no "
+        />
+        <NextSeo
+          title={metaDetails.title}
+          description={metaDetails.description}
+          canonical={metaDetails.url}
+          openGraph={{
+            url: metaDetails.url,
+            title: metaDetails.title,
+            description: metaDetails.description,
+            images: [
+              {
+                url: "https://www.ishaanbedi.in/meta.png",
+                width: 800,
+                height: 600,
+                alt: "Ishaan Bedi",
+                type: "image/png",
+              },
+            ],
+            site_name: "Ishaan Bedi",
+          }}
+          twitter={{
+            handle: "@ishnbedi",
+            site: "@ishnbedi",
+            cardType: "summary_large_image",
+          }}
         />
       </Head>
       <Header />

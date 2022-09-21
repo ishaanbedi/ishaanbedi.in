@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import { BsTwitter } from "react-icons/bs";
 import supabase from "../../utils/supabaseClient";
 import { useEffect } from "react";
-
+import { NextSeo } from "next-seo";
 const BlogPage = ({ content, slug, post }) => {
   function readingTime(content) {
     const text = content;
@@ -34,37 +34,40 @@ const BlogPage = ({ content, slug, post }) => {
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} Views | ${readingTime(
     post.data.data
   )} min read..png?theme=dark&md=1&fontSize=50px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0`;
+  const metaDetails = {
+    title: post.data.title,
+    description: post.data.description,
+    url: `https://www.ishaanbedi.in/post/${slug}`,
+  };
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
         <title>{post.data.title} | Ishaan Bedi</title>
-        <meta name="title" content={post.data.title} />
-        <meta name="description" content={post.data.metaDesc} />
-
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`https:/www.ishaanbedi.in/post/${slug}`}
+        <NextSeo
+          title={metaDetails.title}
+          description={metaDetails.description}
+          canonical={metaDetails.url}
+          openGraph={{
+            url: metaDetails.url,
+            title: metaDetails.title,
+            description: metaDetails.description,
+            images: [
+              {
+                url: ogImage,
+                width: 800,
+                height: 600,
+                alt: "Ishaan Bedi",
+                type: "image/png",
+              },
+            ],
+            site_name: "Ishaan Bedi",
+          }}
+          twitter={{
+            handle: "@ishnbedi",
+            site: "@ishnbedi",
+            cardType: "summary_large_image",
+          }}
         />
-        <meta
-          property="og:title"
-          content={post.data.title + " | Ishaan Bedi"}
-        />
-        <meta property="og:description" content={post.data.metaDesc} />
-        <meta property="og:image" content={ogImage} />
-
-        <meta property="twitter:card" content={post.data.metaDesc} />
-        <meta
-          property="twitter:url"
-          content={`https:/www.ishaanbedi.in/post/${slug}`}
-        />
-        <meta
-          property="twitter:title"
-          content={post.data.title + " | Ishaan Bedi"}
-        />
-        <meta property="twitter:description" content={post.data.metaDesc} />
-        <meta property="twitter:image" content={ogImage} />
-
         <meta
           name="viewport"
           content="initial-scale=1.0, width=device-width user-scalable=no "

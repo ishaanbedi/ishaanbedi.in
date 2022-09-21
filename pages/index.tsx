@@ -5,10 +5,13 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import HeadTag from "../components/HeadTag";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
+
 const metaDetails = {
   title: "Ishaan Bedi",
   description:
     "Portfolio website of Ishaan Bedi, a developer from New Delhi, India.",
+  url: "https://www.ishaanbedi.in",
 };
 const Index = () => {
   let data = {
@@ -50,38 +53,30 @@ const Index = () => {
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
-        <meta name="title" content={metaDetails.title} />
-        <meta name="description" content={metaDetails.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ishaanbedi.in/" />
-        <meta property="og:title" content="Ishaan Bedi" />
-
-        <meta
-          property="og:description"
-          content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
-        />
-        <meta
-          name="google-site-verification"
-          content="yEAyX24NQpFNFN9tBd3Isct51jdK8humRcf_OhTCVlg"
-        />
-        <meta
-          property="og:description"
-          content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
-        />
-        <meta
-          name="google-site-verification"
-          content="yEAyX24NQpFNFN9tBd3Isct51jdK8humRcf_OhTCVlg"
-        />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://ishaanbedi.in/" />
-        <meta property="twitter:title" content="Ishaan Bedi" />
-        <meta
-          property="twitter:description"
-          content="Portfolio website of Ishaan Bedi, a developer from New Delhi, India."
-        />
-        <meta
-          property="twitter:image"
-          content="https://pbs.twimg.com/profile_banners/1048137349811593217/1649585518/1500x500"
+        <NextSeo
+          title={metaDetails.title}
+          description={metaDetails.description}
+          canonical={metaDetails.url}
+          openGraph={{
+            url: metaDetails.url,
+            title: metaDetails.title,
+            description: metaDetails.description,
+            images: [
+              {
+                url: "https://www.ishaanbedi.in/meta.png",
+                width: 800,
+                height: 600,
+                alt: "Ishaan Bedi",
+                type: "image/png",
+              },
+            ],
+            site_name: "Ishaan Bedi",
+          }}
+          twitter={{
+            handle: "@ishnbedi",
+            site: "@ishnbedi",
+            cardType: "summary_large_image",
+          }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
