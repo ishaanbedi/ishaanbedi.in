@@ -4,6 +4,7 @@ import { IoLogoVercel } from "react-icons/io5";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Clock from "react-live-clock";
 
 const Footer = (props) => {
   return (
@@ -52,7 +53,13 @@ const Footer = (props) => {
 
             <p className="mt-4 text-sm text-center text-gray-500 dark:text-gray-400 lg:text-right lg:mt-0">
               &copy; {new Date().getFullYear()} {props.name}.
-              <br /> This is an MIT Licensed application.
+              <br />
+              New Delhi {" • "}
+              <Clock
+                format={"hh:mm A"}
+                ticking={true}
+                timezone={"Asia/Kolkata"}
+              />
               <br />
             </p>
           </div>
