@@ -119,18 +119,27 @@ const BlogPage = ({ content, slug, post }) => {
 export default BlogPage;
 
 export const getServerSideProps = async ({ params: { slug } }) => {
-  const post = await supabase
-    .from("blog.ishaanbedi.in")
-    .select("*")
-    .eq("slug", slug)
-    .single();
-  const { data: frontmatter, content } = matter(post.data.data);
+  try {
+    const post = await supabase
+      .from("blog.ishaanbedi.in")
+      .select("*")
+      .eq("slug", slug)
+      .single();
+    const { data: frontmatter, content } = matter(post.data.data);
 
-  return {
-    props: {
-      post,
-      content,
-      slug,
-    },
-  };
+    return {
+      props: {
+        post,
+        content,
+        slug,
+      },
+    };
+  } catch (e) {
+    return {
+      redirect: {
+        destination: "/404",
+        permanent: false,
+      },
+    };
+  }
 };

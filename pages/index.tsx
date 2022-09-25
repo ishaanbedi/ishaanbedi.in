@@ -45,9 +45,6 @@ const Index = () => {
         github: "https://github.com/ishaanbedi/ishaanbedi.in",
       },
     ],
-
-    image:
-      "https://kcldtzblfykiwwltfouv.supabase.co/storage/v1/object/public/profile-image/profile",
   };
 
   return (
@@ -78,12 +75,6 @@ const Index = () => {
             cardType: "summary_large_image",
           }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
-          rel="stylesheet"
-        />
         <script
           async
           defer
@@ -106,7 +97,7 @@ const Index = () => {
           about={
             "Welcome to my small corner on the web. I'm a 19-year-old student from Delhi, India. I love working with technologies & frameworks to create and design applications for the web and mobile-computers. Reach me at hi@ishaanbedi.in"
           }
-          image={data.image}
+          image="/profile.jpeg"
         />
         <SocialLink
           github={data.github}
