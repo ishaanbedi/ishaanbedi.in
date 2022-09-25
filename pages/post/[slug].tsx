@@ -117,8 +117,15 @@ const BlogPage = ({ content, slug, post }) => {
 };
 
 export default BlogPage;
-
-export const getServerSideProps = async ({ params: { slug } }) => {
+// static path
+export async function getStaticPaths() {
+  const { data, error } = await supabase.from("blog.ishaanbedi.in").select();
+  const paths = data.map((post) => ({
+    params: { slug: post.slug },
+  }));
+  return { paths, fallback: false };
+}
+export async function getStaticProps({ params: { slug } }) {
   try {
     const post = await supabase
       .from("blog.ishaanbedi.in")
@@ -133,10 +140,11 @@ export const getServerSideProps = async ({ params: { slug } }) => {
         content,
         slug,
       },
+      revalidate: 10,
     };
   } catch (e) {
     return {
       notFound: true,
     };
   }
-};
+}
