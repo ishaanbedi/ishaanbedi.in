@@ -136,10 +136,7 @@ export const getServerSideProps = async ({ params: { slug } }) => {
     };
   } catch (e) {
     return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
+      notFound: true,
     };
   }
 };
