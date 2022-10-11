@@ -4,9 +4,9 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import { BsTwitter } from "react-icons/bs";
 import supabase from "../../utils/supabaseClient";
-import { useEffect } from "react";
-import { NextSeo } from "next-seo";
+import { useEffect, useState } from "react";
 const BlogPage = ({ content, slug, post }) => {
+  const [ogImage, setOgImage] = useState("");
   function readingTime(content) {
     const text = content;
     const wpm = 225;
@@ -23,55 +23,48 @@ const BlogPage = ({ content, slug, post }) => {
     }
     updateViews();
   }, []);
-  var ogImage = `https://og-image.vercel.app/**_${
-    post.data.title
-  }_** <br/> ${new Date(post.data.date).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  })} | ${post.data.views
-    .toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} Views | ${readingTime(
-    post.data.data
-  )} min read..png?theme=dark&md=1&fontSize=50px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0`;
-  const metaDetails = {
-    title: post.data.title,
-    description: post.data.description,
-    url: `https://www.ishaanbedi.in/post/${slug}`,
+  const ogImageFetch = async () => {
+    var formattedDate = new Date(post.data.date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+    formattedDate = formattedDate.replace(/ /g, "%20");
+    const title = post.data.title.replace(/ /g, "%20");
+    var ogImage =
+      await `https://og.ishaanbedi.in/api/og?views=${post.data.views}&date=${formattedDate}&title=${title}`;
+    setOgImage(ogImage);
   };
+
+  ogImageFetch();
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
         <title>{post.data.title} | Ishaan Bedi</title>
-        <NextSeo
-          title={metaDetails.title}
-          description={metaDetails.description}
-          canonical={metaDetails.url}
-          openGraph={{
-            url: metaDetails.url,
-            title: metaDetails.title,
-            description: metaDetails.description,
-            images: [
-              {
-                url: ogImage,
-                width: 800,
-                height: 600,
-                alt: "Ishaan Bedi",
-                type: "image/png",
-              },
-            ],
-            site_name: "Ishaan Bedi",
-          }}
-          twitter={{
-            handle: "@ishnbedi",
-            site: "@ishnbedi",
-            cardType: "summary_large_image",
-          }}
-        />
         <meta
           name="viewport"
           content="initial-scale=1.0, width=device-width user-scalable=no "
         />
+        <meta name="description" content={post.data.description} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ishnbedi" />
+        <meta name="twitter:creator" content="@ishnbedi" />
+        <meta name="twitter:title" content={post.data.title} />
+        <meta name="twitter:description" content={post.data.description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta
+          property="og:url"
+          content={`https://blog.ishaanbedi.in/${slug}`}
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.data.title} />
+        <meta property="og:description" content={post.data.description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="Ishaan Bedi" />
+        <meta property="article:published_time" content={post.data.date} />
+        <meta property="article:modified_time" content={post.data.date} />
+        <meta property="article:section" content="Blog" />
+        <meta property="article:tag" content={post.data.tags} />
       </Head>
       <Header />
       <div className=" mx-2">
