@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import Link from "next/link";
 import Head from "next/head";
 import supabase from "../utils/supabaseClient";
-import { NextSeo } from "next-seo";
 const metaDetails = {
   title: "Posts | Ishaan Bedi",
   description: "Blog posts by Ishaan Bedi.",

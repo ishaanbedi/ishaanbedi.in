@@ -5,7 +5,7 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import HeadTag from "../components/HeadTag";
 import Head from "next/head";
-import { NextSeo } from "next-seo";
+
 const Index = () => {
   let data = {
     github: "https://github.com/ishaanbedi",
