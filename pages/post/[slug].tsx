@@ -23,20 +23,7 @@ const BlogPage = ({ content, slug, post }) => {
     }
     updateViews();
   }, []);
-  const ogImageFetch = async () => {
-    var formattedDate = new Date(post.data.date).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-    formattedDate = formattedDate.replace(/ /g, "%20");
-    const title = post.data.title.replace(/ /g, "%20");
-    var ogImage =
-      await `https://og.ishaanbedi.in/api/og?views=${post.data.views}&date=${formattedDate}&title=${title}`;
-    setOgImage(ogImage);
-  };
 
-  ogImageFetch();
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -45,26 +32,10 @@ const BlogPage = ({ content, slug, post }) => {
           name="viewport"
           content="initial-scale=1.0, width=device-width user-scalable=no "
         />
-        <meta name="description" content={post.data.description} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ishnbedi" />
-        <meta name="twitter:creator" content="@ishnbedi" />
-        <meta name="twitter:title" content={post.data.title} />
-        <meta name="twitter:description" content={post.data.description} />
-        <meta name="twitter:image" content={ogImage} />
         <meta
-          property="og:url"
-          content={`https://blog.ishaanbedi.in/${slug}`}
+          property="og:image"
+          content={`https://og.ishaanbedi.in/api/og?title=www.ishaanbedi.in/posts`}
         />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={post.data.title} />
-        <meta property="og:description" content={post.data.description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:site_name" content="Ishaan Bedi" />
-        <meta property="article:published_time" content={post.data.date} />
-        <meta property="article:modified_time" content={post.data.date} />
-        <meta property="article:section" content="Blog" />
-        <meta property="article:tag" content={post.data.tags} />
       </Head>
       <Header />
       <div className=" mx-2">

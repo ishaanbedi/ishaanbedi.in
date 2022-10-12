@@ -50,30 +50,9 @@ const Index = () => {
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
-        <NextSeo
-          title={metaDetails.title}
-          description={metaDetails.description}
-          canonical={metaDetails.url}
-          openGraph={{
-            url: metaDetails.url,
-            title: metaDetails.title,
-            description: metaDetails.description,
-            images: [
-              {
-                url: "https://www.ishaanbedi.in/meta.png",
-                width: 800,
-                height: 600,
-                alt: "Ishaan Bedi",
-                type: "image/png",
-              },
-            ],
-            site_name: "Ishaan Bedi",
-          }}
-          twitter={{
-            handle: "@ishnbedi",
-            site: "@ishnbedi",
-            cardType: "summary_large_image",
-          }}
+        <meta
+          property="og:image"
+          content=""
         />
       </Head>
       <HeadTag name="Ishaan Bedi" />
