@@ -5,8 +5,7 @@ import Header from "../../components/Header";
 import { BsTwitter } from "react-icons/bs";
 import supabase from "../../utils/supabaseClient";
 import { useEffect, useState } from "react";
-const BlogPage = ({ content, slug, post }) => {
-  const [ogImage, setOgImage] = useState("");
+const BlogPage = ({ content, slug, post, blogId }) => {
   function readingTime(content) {
     const text = content;
     const wpm = 225;
@@ -23,7 +22,6 @@ const BlogPage = ({ content, slug, post }) => {
     }
     updateViews();
   }, []);
-
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -34,7 +32,7 @@ const BlogPage = ({ content, slug, post }) => {
         />
         <meta
           property="og:image"
-          content={`https://og.ishaanbedi.in/api/og?title=www.ishaanbedi.in/posts`}
+          content={`https://og.ishaanbedi.in/api/og?blogId=${blogId}`}
         />
       </Head>
       <Header />
@@ -81,7 +79,6 @@ const BlogPage = ({ content, slug, post }) => {
 };
 
 export default BlogPage;
-// static path
 export async function getStaticPaths() {
   const { data, error } = await supabase.from("blog.ishaanbedi.in").select();
   const paths = data.map((post) => ({
@@ -96,13 +93,14 @@ export async function getStaticProps({ params: { slug } }) {
       .select("*")
       .eq("slug", slug)
       .single();
+    const blogId = post.data.id;
     const { data: frontmatter, content } = matter(post.data.data);
-
     return {
       props: {
         post,
         content,
         slug,
+        blogId,
       },
       revalidate: 10,
     };
