@@ -17,30 +17,21 @@ const PostsPage = ({ data }) => {
           name="viewport"
           content="initial-scale=1.0, width=device-width user-scalable=no "
         />
-        <NextSeo
-          title={metaDetails.title}
-          description={metaDetails.description}
-          canonical={metaDetails.url}
-          openGraph={{
-            url: metaDetails.url,
-            title: metaDetails.title,
-            description: metaDetails.description,
-            images: [
-              {
-                url: "https://www.ishaanbedi.in/meta.png",
-                width: 800,
-                height: 600,
-                alt: "Ishaan Bedi",
-                type: "image/png",
-              },
-            ],
-            site_name: "Ishaan Bedi",
-          }}
-          twitter={{
-            handle: "@ishnbedi",
-            site: "@ishnbedi",
-            cardType: "summary_large_image",
-          }}
+
+        <title>Posts - Ishaan Bedi</title>
+        <meta property="og:title" content="Posts - Ishaan Bedi" />
+        <meta property="og:site_name" content="Ishaan Bedi" />
+        <meta property="og:url" content="https://www.ishaanbedi.in/posts" />
+        <meta property="og:description" content="Posts by Ishaan Bedi." />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="https://og.ishaanbedi.in/api/home" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ishnbedi" />
+        <meta name="twitter:title" content="Posts - Ishaan Bedi" />
+        <meta name="twitter:description" content="" />
+        <meta
+          name="twitter:image"
+          content="https://og.ishaanbedi.in/api/home"
         />
       </Head>
       <Header />

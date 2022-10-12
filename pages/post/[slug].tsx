@@ -26,13 +26,26 @@ const BlogPage = ({ content, slug, post, blogId }) => {
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
         <title>{post.data.title} | Ishaan Bedi</title>
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width user-scalable=no "
-        />
+        <meta property="og:title" content={post.data.title} />
+        <meta property="og:site_name" content="Ishaan Bedi" />
+        <meta property="og:url" content="https://www.ishaanbedi.in" />
+        <meta property="og:description" content={post.data.description} />
+        <meta property="og:type" content="" />
         <meta
           property="og:image"
           content={`https://og.ishaanbedi.in/api/og?blogId=${blogId}`}
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ishnbedi" />
+        <meta name="twitter:title" content="Ishaan Bedi" />
+        <meta name="twitter:description" content="" />
+        <meta
+          name="twitter:image"
+          content={`https://og.ishaanbedi.in/api/og?blogId=${blogId}`}
+        />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width user-scalable=no "
         />
       </Head>
       <Header />
