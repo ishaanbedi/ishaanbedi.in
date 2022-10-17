@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Header from "../components/Header";
 import Uses from "../components/Uses";
 
 const Index = () => {
@@ -25,7 +24,6 @@ const Index = () => {
           content="https://og.ishaanbedi.in/api/home"
         />
       </Head>
-      <Header />
       <main>
         <Uses />
       </main>

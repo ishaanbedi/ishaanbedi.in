@@ -3,7 +3,7 @@ import "../styles/main.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
-
+import Header from "../components/Header";
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps }) {
         showOnShallow={true}
         options={{ showSpinner: false }}
       />
-
       <ThemeProvider enableSystem={true} attribute="class">
         <AnimatePresence>
           <motion.div
@@ -24,6 +23,7 @@ function MyApp({ Component, pageProps }) {
             exit={{ opacity: 0 }}
             className="content"
           >
+            <Header />
             <Component {...pageProps} />
           </motion.div>
         </AnimatePresence>

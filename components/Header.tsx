@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { BsCommand } from "react-icons/bs";
+import { BiLinkExternal } from "react-icons/bi";
 
 const navLinks = [
   {
@@ -18,6 +19,14 @@ const navLinks = [
   {
     label: "Uses",
     link: "/uses",
+  },
+  {
+    label: "Twitter",
+    link: "https://www.twitter.com/ishnbedi",
+  },
+  {
+    label: "Github",
+    link: "https://www.github.com/ishaanbedi",
   },
 ];
 
@@ -123,18 +132,45 @@ const Header = () => {
             </motion.div>
           </Link>
 
-          <div className="justify-end flex flex-row space-x-4 sm:flex">
+          <div className="justify-end flex flex-row space-x-4 sm:flex mx-2">
+            <div className="mt-2 lg:md:flex space-x-4 hidden">
+              {navLinks.map((link) => (
+                <Link href={link.link} key={link.label} passHref>
+                  {link.link.includes("http") ? (
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${
+                        router.pathname === link.link
+                          ? "text-[#737373]"
+                          : "text-[#737373]"
+                      } hover:text-[#737373]`}
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <a
+                      className={`${
+                        router.pathname === link.link
+                          ? "text-[#a1a1a1] font-bold"
+                          : "text-[#737373]"
+                      } hover:text-[#737373]`}
+                    >
+                      {link.label}
+                    </a>
+                  )}
+                </Link>
+              ))}
+            </div>
             <div className="mt-2">{renderThemeChanger()}</div>
-            <motion.button
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
+            <button
               onClick={() => {
                 setOpenNav(true);
               }}
-              className="text-[#737373] focus:border-none mr-1"
+              className="text-[#737373] lg:md:hidden focus:border-none mr-1"
             >
               <BsCommand />
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>
@@ -143,22 +179,40 @@ const Header = () => {
           <>
             <div className=" justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                <div className=" w-72 rounded-lg relative flex flex-col backdrop-blur-xl bg-black  border-2 outline-none focus:outline-none">
+                <div className="w-72 rounded-lg relative flex flex-col backdrop-blur-xl bg-black  border-2 outline-none focus:outline-none">
                   <nav className="flex flex-col space-y-1">
                     {navLinks.map((link) => (
                       <Link href={link.link} key={link.label} passHref>
-                        <a
-                          className={
-                            router.pathname.slice(1).toLowerCase() !==
-                            link.label.toLowerCase()
-                              ? "flex items-center px-4 py-2 text-gray-300  hover:bg-gray-100 hover:text-gray-700"
-                              : "flex items-center px-4 py-2  bg-gray-100 text-gray-700"
-                          }
-                        >
-                          <span className="ml-3 text-lg font-medium">
-                            {link.label}
-                          </span>
-                        </a>
+                        {link.link.includes("http") ? (
+                          <a
+                            target={"_blank"}
+                            rel="noopener noreferrer"
+                            className={
+                              router.pathname.slice(1).toLowerCase() !==
+                              link.label.toLowerCase()
+                                ? "flex items-center px-4 py-2 text-gray-300  hover:bg-gray-100 hover:text-gray-700"
+                                : "flex items-center px-4 py-2  bg-gray-100 text-gray-700"
+                            }
+                          >
+                            <span className="ml-3 text-lg font-medium flex">
+                              {link.label}
+                              <BiLinkExternal className="ml-1 mt-0.5" />
+                            </span>
+                          </a>
+                        ) : (
+                          <a
+                            className={
+                              router.pathname.slice(1).toLowerCase() !==
+                              link.label.toLowerCase()
+                                ? "flex items-center px-4 py-2 text-gray-300  hover:bg-gray-100 hover:text-gray-700"
+                                : "flex items-center px-4 py-2  bg-gray-100 text-gray-700"
+                            }
+                          >
+                            <span className="ml-3 text-lg font-medium">
+                              {link.label}
+                            </span>
+                          </a>
+                        )}
                       </Link>
                     ))}
                   </nav>

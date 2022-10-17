@@ -1,6 +1,7 @@
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
 import Link from "next/link";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Projects = (props) => {
   return (
@@ -9,49 +10,44 @@ const Projects = (props) => {
       animate={{ opacity: 1, scale: 1 }}
     >
       <div className="mt-12">
-        <h2 className="text-2xl font-black text-center text-[#E6E6E6]">
+        <h2 className="text-2xl font-black text-center dark:text-[#E6E6E6] my-4">
           Featured Projects
         </h2>
-        <div className="grid lg:md:grid-cols-2 grid-cols-1 mt-4 lg:mx-0 md:mx-0 mx-2 ">
-          {props.projects.map((e, i) => {
-            return (
-              <motion.div whileHover={{ scale: 1.01 }} key={Number(i)}>
-                <article className="ease-in duration-75 p-1 shadow-sm rounded-2xl">
-                  <div className="flex flex-col justify-end  dark:bg-zinc-800 bg-[#444444]/10 sm:p-8 rounded-xl hover:bg-opacity-90 py-12">
-                    <div className="my-auto">
-                      <h5 className="lg:text-left md:text-left text-center lg:text-xl md:text-xl text-md font-bold dark:text-[#E6E6E6]">
-                        {e.name}
-                      </h5>
-                      <div className="flex flex-wrap items-center lg:justify-between md:justify-between justify-center ">
-                        <div className="space-x-2 items-center justify-center mt-8">
-                          <Link passHref href={`${e.github}`}>
-                            <a
-                              target={"_blank"}
-                              className="inline-block p-3 border  dark:border-[#E6E6E6]/90 border-[#171717] hover:bg-[#E6E6E6]/90 hover:text-[#171717] rounded-full focus:outline-none focus:ring"
-                            >
-                              <AiFillGithub />
-                            </a>
-                          </Link>
-                          <span
-                            className={e.web !== null ? "visible" : "hidden"}
-                          >
-                            <Link passHref href={`${e.web}`}>
-                              <a
-                                target={"_blank"}
-                                className="inline-block p-3 border  dark:border-[#E6E6E6]/90 border-[#171717] hover:bg-[#E6E6E6]/90 hover:text-[#171717] rounded-full focus:outline-none focus:ring"
-                              >
-                                <AiOutlineLink />
-                              </a>
-                            </Link>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </motion.div>
-            );
-          })}
+        <div>
+          {props.projects.map((project, index) => (
+            <div
+              key={index}
+              className="dark:bg-[#232323]/80 hover:dark:bg-[#232323] bg-[#c8c8c8] rounded-sm shadow-sm py-6 my-1"
+            >
+              <h3 className="ml-3 text-xl">{project.name}</h3>
+              <div className="flex flex-row space-x-3 mt-3 ml-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row dark:text-[#E6E6E6] text-[#232323] hover:underline"
+                >
+                  <AiFillGithub className=" text-xl" />
+                </a>
+                <a
+                  href={project.web}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row dark:text-[#E6E6E6] text-[#232323] hover:underline"
+                >
+                  <AiOutlineLink className=" text-xl" />
+                </a>
+              </div>
+            </div>
+          ))}
+          <Link href="https://www.github.com/ishaanbedi" passHref>
+            <a target="_blank" rel="noopener noreferrer">
+              <p className="flex justify-center text-lg my-4 dark:text-[#E6E6E6]/50">
+                Check out more on GitHub
+                <BiLinkExternal className="ml-1 mt-0.5" />
+              </p>
+            </a>
+          </Link>
         </div>
       </div>
     </motion.div>

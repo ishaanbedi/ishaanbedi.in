@@ -1,15 +1,13 @@
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTailwindcss, SiSupabase } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Clock from "react-live-clock";
 
 const Footer = (props) => {
   return (
     <footer>
-      <motion.div whileHover={{ scale: 1.01 }}>
+      <div>
         <div className="px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">
             <div className="flex justify-center text-gray-500 dark:text-gray-400 sm:justify-start">
@@ -64,7 +62,7 @@ const Footer = (props) => {
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </footer>
   );
 };

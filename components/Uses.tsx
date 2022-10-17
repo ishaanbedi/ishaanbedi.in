@@ -27,7 +27,7 @@ const Uses = () => {
     },
     "Frameworks & Libraries": {
       React: <SiReact />,
-      Nextjs: <SiNextdotjs />,
+      "Next.js": <SiNextdotjs />,
       TailwindCSS: <SiTailwindcss />,
       SwiftUI: <FaSwift />,
     },

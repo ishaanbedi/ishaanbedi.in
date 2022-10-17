@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     domains: ["kcldtzblfykiwwltfouv.supabase.co"],
   },
-  fallback: false,
   optimizeFonts: false,
 };
 

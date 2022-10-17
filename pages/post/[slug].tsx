@@ -1,10 +1,10 @@
 import matter from "gray-matter";
 import md from "markdown-it";
 import Head from "next/head";
-import Header from "../../components/Header";
 import { BsTwitter } from "react-icons/bs";
 import supabase from "../../utils/supabaseClient";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+
 const BlogPage = ({ content, slug, post, blogId }) => {
   function readingTime(content) {
     const text = content;
@@ -21,7 +21,7 @@ const BlogPage = ({ content, slug, post, blogId }) => {
         .match({ slug: slug });
     }
     updateViews();
-  }, []);
+  }, [post.data.views, slug]);
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -48,7 +48,6 @@ const BlogPage = ({ content, slug, post, blogId }) => {
           content="initial-scale=1.0, width=device-width user-scalable=no "
         />
       </Head>
-      <Header />
       <div className=" mx-2">
         <h1 className="lg:text-5xl text-xl lg:my-12 md:my-8 my-6 font-black">
           {post.data.title}
@@ -76,14 +75,6 @@ const BlogPage = ({ content, slug, post, blogId }) => {
               <BsTwitter className="text-xl" />
             </>
             <span className="ml-2 mt-1">Share on Twitter</span>
-          </a>
-          <a
-            href={`mailto:?subject=Check out ${post.data.title} by Ishaan Bedi&body=Here's the article: ${post.data.title}(https://www.ishaanbedi.in/post/${slug}) written by Ishaan Bedi. I thought you might like it. `}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center space-x-2 dark:hover:text-yellow-400 hover:text-yellow-600"
-          >
-            <span className="ml-2 mt-1">Share via Email</span>
           </a>
         </p>
       </div>

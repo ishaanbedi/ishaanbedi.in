@@ -1,10 +1,10 @@
 import SocialLink from "../components/SocialLink";
 import ProfileCard from "../components/ProfileCard";
-import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import HeadTag from "../components/HeadTag";
 import Head from "next/head";
+import SubscribeForm from "../components/SubscribeForm";
 
 const Index = () => {
   let data = {
@@ -26,8 +26,8 @@ const Index = () => {
         github: "https://github.com/ishaanbedi/quizify",
       },
       {
-        web: null,
-        name: "👑 Chipify: Exploring M Series Chips",
+        web: "https://www.wwdcscholars.com/s/ADD233CE-6526-4096-AA8F-C6A6203918CC/2022",
+        name: "Chipify: Exploring M Series Chips",
         tech: ["Swift", "SwiftUI", "iOS/iPadOS/MacOS"],
         github: "https://github.com/ishaanbedi/Chipify-WWDC22",
       },
@@ -62,18 +62,10 @@ const Index = () => {
           content="https://og.ishaanbedi.in/api/home"
         />
       </Head>
-
       <div className="min-h-screen lg:mx-80 mx-2 ">
         <HeadTag name="Ishaan Bedi" />
-        <Header />
         <main>
-          <ProfileCard
-            name="Ishaan Bedi"
-            about={
-              "Welcome to my small corner on the web. I'm a 19-year-old student from Delhi, India. I love working with technologies & frameworks to create and design applications for the web and mobile-computers. Reach me at hi@ishaanbedi.in"
-            }
-            image="/profile.jpeg"
-          />
+          <ProfileCard name="Ishaan Bedi" image="/images/profile-memoji.png" />
           <SocialLink
             github={data.github}
             linkedin={data.linkedin}
@@ -81,6 +73,7 @@ const Index = () => {
             medium={data.medium}
           />
           <Projects projects={data.projects} />
+          <SubscribeForm />
         </main>
         <Footer name="Ishaan Bedi" />
       </div>
