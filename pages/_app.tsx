@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
 import Header from "../components/Header";
+import { Analytics } from "@vercel/analytics/react";
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -25,6 +27,7 @@ function MyApp({ Component, pageProps }) {
           >
             <Header />
             <Component {...pageProps} />
+            <Analytics />
           </motion.div>
         </AnimatePresence>
       </ThemeProvider>

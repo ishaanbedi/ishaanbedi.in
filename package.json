@@ -12,6 +12,7 @@
     "@supabase/supabase-js": "^1.35.6",
     "@tailwindcss/forms": "^0.5.3",
     "@upstash/claps": "^1.0.0-beta.4",
+    "@vercel/analytics": "^0.1.1",
     "@vercel/og": "^0.0.15",
     "axios": "^0.27.2",
     "clap-button-com": "^0.1.9",
