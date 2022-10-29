@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { TbError404 } from "react-icons/tb";
 export default function Custom404() {
   return (
