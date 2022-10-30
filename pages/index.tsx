@@ -75,7 +75,6 @@ const Index = () => {
           <Projects projects={data.projects} />
           <SubscribeForm />
         </main>
-        <Footer name="Ishaan Bedi" />
       </div>
     </>
   );
