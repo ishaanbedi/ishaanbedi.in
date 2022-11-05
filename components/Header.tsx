@@ -20,14 +20,6 @@ const navLinks = [
     label: "Uses",
     link: "/uses",
   },
-  {
-    label: "Twitter",
-    link: "https://www.twitter.com/ishnbedi",
-  },
-  {
-    label: "Github",
-    link: "https://www.github.com/ishaanbedi",
-  },
 ];
 
 const Header = () => {
@@ -137,9 +129,7 @@ const Header = () => {
               {navLinks.map((link) => (
                 <Link href={link.link} key={link.label} passHref>
                   {link.link.includes("http") ? (
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <span
                       className={`${
                         router.pathname === link.link
                           ? "text-[#737373]"
@@ -147,9 +137,9 @@ const Header = () => {
                       } hover:text-[#737373]`}
                     >
                       {link.label}
-                    </a>
+                    </span>
                   ) : (
-                    <a
+                    <span
                       className={`${
                         router.pathname === link.link
                           ? "text-[#a1a1a1] font-bold"
@@ -157,7 +147,7 @@ const Header = () => {
                       } hover:text-[#737373]`}
                     >
                       {link.label}
-                    </a>
+                    </span>
                   )}
                 </Link>
               ))}
@@ -184,9 +174,7 @@ const Header = () => {
                     {navLinks.map((link) => (
                       <Link href={link.link} key={link.label} passHref>
                         {link.link.includes("http") ? (
-                          <a
-                            target={"_blank"}
-                            rel="noopener noreferrer"
+                          <span
                             className={
                               router.pathname.slice(1).toLowerCase() !==
                               link.label.toLowerCase()
@@ -198,9 +186,9 @@ const Header = () => {
                               {link.label}
                               <BiLinkExternal className="ml-1 mt-0.5" />
                             </span>
-                          </a>
+                          </span>
                         ) : (
-                          <a
+                          <span
                             className={
                               router.pathname.slice(1).toLowerCase() !==
                               link.label.toLowerCase()
@@ -211,7 +199,7 @@ const Header = () => {
                             <span className="ml-3 text-lg font-medium">
                               {link.label}
                             </span>
-                          </a>
+                          </span>
                         )}
                       </Link>
                     ))}

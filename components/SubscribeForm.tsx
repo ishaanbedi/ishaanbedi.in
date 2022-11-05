@@ -78,11 +78,11 @@ const SubscribeForm = () => {
     <section>
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-xl font-bold text-[#151515] dark:text-[#E6E6E6]">
             Stay in the loop.
           </h2>
 
-          <p className="text-gray-500 dark:text-gray-400 sm:mt-4 lg:md:text-lg text-sm">
+          <p className="text-[#151515] dark:text-[#E6E6E6]/70 sm:mt-4 lg:md:text-lg text-sm">
             Get to know about my new posts and projects.
             <br />
             No spam, ever!

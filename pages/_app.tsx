@@ -3,8 +3,8 @@ import "../styles/main.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
-import Header from "../components/Header";
 import { Analytics } from "@vercel/analytics/react";
+import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }) {
   return (

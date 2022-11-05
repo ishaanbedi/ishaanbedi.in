@@ -1,56 +1,41 @@
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss, SiSupabase } from "react-icons/si";
-import { IoLogoVercel } from "react-icons/io5";
 import Link from "next/link";
 import Clock from "react-live-clock";
+import { FiArrowUpRight } from "react-icons/fi";
+import { useEffect, useState } from "react";
 
-const Footer = (props) => {
+const Footer = () => {
+  const [socials, setSocials] = useState([]);
+  const socialLinks = () => {
+    fetch("/api/socials")
+      .then((res) => res.json())
+      .then((data) => {
+        setSocials(data);
+      });
+  };
+  useEffect(() => {
+    socialLinks();
+  }, []);
   return (
     <footer>
       <div>
         <div className="px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">
-            <div className="flex justify-center text-gray-500 dark:text-gray-400 sm:justify-start">
-              Built with{"  "}
-              <Link passHref href="https://nextjs.org/">
-                <a
-                  target={"_blank"}
-                  className=" cursor-pointer mt-[2px] mx-1 hover:text-[#F05454] "
-                >
-                  <TbBrandNextjs />
-                </a>
-              </Link>
-              and
-              <Link passHref href="https://tailwindcss.com/">
-                <a
-                  target={"_blank"}
-                  className=" cursor-pointer mt-[2px] ml-1 hover:text-[#F05454]"
-                >
-                  <SiTailwindcss />
-                </a>
-              </Link>
-              , shipped with
-              <Link passHref href="https://vercel.com/">
-                <a
-                  target={"_blank"}
-                  className=" cursor-pointer mt-[2px] mx-1 hover:text-[#F05454]"
-                >
-                  <IoLogoVercel />
-                </a>
-              </Link>
-              &amp;{" "}
-              <Link passHref href="https://www.supabase.com/">
-                <a
-                  target={"_blank"}
-                  className=" cursor-pointer mt-[2px] mx-1 hover:text-[#F05454]"
-                >
-                  <SiSupabase />
-                </a>
-              </Link>
+            <div className="flex justify-center space-x-4 sm:justify-start">
+              {Object.entries(socials).map((e, i) => {
+                return (
+                  <div key={i}>
+                    <Link target={"_blank"} passHref href={`${e[1].link}`}>
+                      <span className="flex hover:underline underline-offset-4 items-center lg:md:text-lg text-md text-[#151515] dark:text-[#E6E6E6]/70">
+                        {e[0]}
+                        <FiArrowUpRight className="ml-1 lg:md:block hidden" />
+                      </span>
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
-
-            <p className="mt-4 text-sm text-center text-gray-500 dark:text-gray-400 lg:text-right lg:mt-0">
-              &copy; {new Date().getFullYear()} {props.name}.
+            <p className="mt-4 text-sm text-center text-[#151515] dark:text-[#E6E6E6]/70 lg:text-right lg:md:text-md lg:mt-0">
+              Ishaan Bedi | {new Date().getFullYear()}
               <br />
               New Delhi {" • "}
               <Clock
@@ -66,5 +51,4 @@ const Footer = (props) => {
     </footer>
   );
 };
-
 export default Footer;
