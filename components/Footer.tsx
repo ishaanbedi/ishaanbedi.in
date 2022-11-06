@@ -4,24 +4,19 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
 const Footer = () => {
-  const [socials, setSocials] = useState([]);
-  const socialLinks = () => {
-    fetch("/api/socials")
-      .then((res) => res.json())
-      .then((data) => {
-        setSocials(data);
-      });
+  const socialLinks = {
+    GitHub: { link: "https://www.github.com/ishaanbedi" },
+    LinkedIn: { link: "https://www.linkedin.com/in/ishaanbedi13" },
+    Twitter: { link: "https://www.twitter.com/ishnbedi" },
+    CodePen: { link: "https://www.codepen.io/ishaanbedi" },
   };
-  useEffect(() => {
-    socialLinks();
-  }, []);
   return (
     <footer>
       <div>
         <div className="px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">
             <div className="flex justify-center space-x-4 sm:justify-start">
-              {Object.entries(socials).map((e, i) => {
+              {Object.entries(socialLinks).map((e, i) => {
                 return (
                   <div key={i}>
                     <Link target={"_blank"} passHref href={`${e[1].link}`}>

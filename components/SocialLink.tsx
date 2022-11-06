@@ -3,21 +3,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 const SocialLinks = () => {
-  const [socials, setSocials] = useState([]);
-  const socialLinks = () => {
-    fetch("/api/socials")
-      .then((res) => res.json())
-      .then((data) => {
-        setSocials(data);
-      });
+  const socialLinks = {
+    GitHub: { link: "https://www.github.com/ishaanbedi" },
+    LinkedIn: { link: "https://www.linkedin.com/in/ishaanbedi13" },
+    Twitter: { link: "https://www.twitter.com/ishnbedi" },
+    CodePen: { link: "https://www.codepen.io/ishaanbedi" },
   };
-  useEffect(() => {
-    socialLinks();
-  }, []);
   return (
     <div>
       <div className=" my-4 flex flex-row space-x-4 lg:justify-start md:justify-start justify-center">
-        {Object.entries(socials).map((e, i) => {
+        {Object.entries(socialLinks).map((e, i) => {
           return (
             <motion.div
               key={i}

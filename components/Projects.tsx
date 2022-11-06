@@ -5,17 +5,32 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-  const socialLinks = () => {
-    fetch("/api/projects")
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
-      });
-  };
-  useEffect(() => {
-    socialLinks();
-  }, []);
+  const projectObj = [
+    {
+      web: "https://supatype.vercel.app/",
+      name: "SupaType: Unlimited Typing Tests",
+      tech: ["Next.js", "TailwindCSS", "Supabase", "Web"],
+      github: "https://github.com/ishaanbedi/supatype",
+    },
+    {
+      web: "https://quizify.ishaanbedi.in/",
+      name: "Quizify: Online quiz platform.",
+      tech: ["Next.js", "TailwindCSS", "Axios", "Web"],
+      github: "https://github.com/ishaanbedi/quizify",
+    },
+    {
+      web: "https://www.wwdcscholars.com/s/ADD233CE-6526-4096-AA8F-C6A6203918CC/2022",
+      name: "Chipify: Exploring M Series Chips",
+      tech: ["Swift", "SwiftUI", "iOS/iPadOS/MacOS"],
+      github: "https://github.com/ishaanbedi/Chipify-WWDC22",
+    },
+    {
+      web: "https://www.ishaanbedi.in/",
+      name: "ishaanbedi.in: Portfolio Website",
+      tech: ["Next.js", "TailwindCSS", "Typescript", "Web"],
+      github: "https://github.com/ishaanbedi/ishaanbedi.in",
+    },
+  ];
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -26,7 +41,7 @@ const Projects = () => {
           Featured Projects
         </h2>
         <div>
-          {projects.map((project, index) => (
+          {projectObj.map((project, index) => (
             <div
               key={index}
               className="dark:bg-[#232323]/80 hover:dark:bg-[#232323] bg-[#c8c8c8] rounded-sm shadow-sm py-6 my-1"
