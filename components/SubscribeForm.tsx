@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import supabase from "../utils/supabaseClient";
 import { validate } from "email-validator";
+import Head from "next/head";
 
 const SubscribeForm = () => {
   const [email, setEmail] = useState("");
@@ -42,24 +43,10 @@ const SubscribeForm = () => {
       progress: undefined,
       theme: "dark",
     });
-  const userRegistered = () =>
-    toast.warn("You're already registered.", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+
   const registerUser = async () => {
     setLoading(true);
-    if (localStorage.getItem("email") === email) {
-      setLoading(false);
-      userRegistered();
-      return;
-    }
+
     const { data, error } = await supabase
       .from("contact.ishaanbedi.in")
       .insert([{ email: email }]);
@@ -69,7 +56,6 @@ const SubscribeForm = () => {
       setLoading(false);
     } else {
       notifyEmailSuccess();
-      localStorage.setItem("email", email);
       setLoading(false);
     }
   };
@@ -82,7 +68,7 @@ const SubscribeForm = () => {
             Stay in the loop.
           </h2>
 
-          <p className="text-[#151515] dark:text-[#E6E6E6]/70 sm:mt-4 lg:md:text-lg text-sm">
+          <p className="text-[#151515] dark:text-[#E6E6E6]/70 sm:mt-4 lg:md:sm:text-lg text-sm">
             Get to know about my new posts and projects.
             <br />
             No spam, ever!

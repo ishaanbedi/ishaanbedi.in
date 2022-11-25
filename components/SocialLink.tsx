@@ -21,16 +21,16 @@ const SocialLinks = () => {
             >
               {e[1].link.startsWith("/") ? (
                 <Link passHref href={`${e[1].link}`}>
-                  <span className="flex hover:underline underline-offset-4 items-center lg:md:text-xl text-lg text-[#151515] dark:text-[#E6E6E6]/70">
+                  <span className="flex hover:underline underline-offset-4 items-center lg:md:sm:text-xl text-lg text-[#151515] dark:text-[#E6E6E6]/70">
                     {e[0]}
-                    <FiArrowUpRight className="ml-1 lg:md:block hidden" />
+                    <FiArrowUpRight className="ml-1 lg:md:sm:block hidden" />
                   </span>
                 </Link>
               ) : (
                 <Link target={"_blank"} passHref href={`${e[1].link}`}>
-                  <span className="flex hover:underline underline-offset-4 items-center lg:md:text-xl text-lg text-[#151515] dark:text-[#E6E6E6]/70">
+                  <span className="flex hover:underline underline-offset-4 items-center lg:md:sm:text-xl text-lg text-[#151515] dark:text-[#E6E6E6]/70">
                     {e[0]}
-                    <FiArrowUpRight className="ml-1 lg:md:block hidden" />
+                    <FiArrowUpRight className="ml-1 lg:md:sm:block hidden" />
                   </span>
                 </Link>
               )}

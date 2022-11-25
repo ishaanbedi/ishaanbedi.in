@@ -1,7 +1,6 @@
 import SocialLink from "../components/SocialLink";
 import ProfileCard from "../components/ProfileCard";
 import Projects from "../components/Projects";
-import Footer from "../components/Footer";
 import HeadTag from "../components/HeadTag";
 import Head from "next/head";
 import SubscribeForm from "../components/SubscribeForm";
@@ -36,9 +35,6 @@ const Index = () => {
           <Projects />
           <SubscribeForm />
         </main>
-        <footer>
-          <Footer />
-        </footer>
       </div>
     </>
   );

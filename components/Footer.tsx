@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Clock from "react-live-clock";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useEffect, useState } from "react";
 
 const Footer = () => {
   const socialLinks = {
@@ -20,16 +19,16 @@ const Footer = () => {
                 return (
                   <div key={i}>
                     <Link target={"_blank"} passHref href={`${e[1].link}`}>
-                      <span className="flex hover:underline underline-offset-4 items-center lg:md:text-lg text-md text-[#151515] dark:text-[#E6E6E6]/70">
+                      <span className="flex hover:underline underline-offset-4 items-center lg:md:sm:text-lg text-md text-[#151515] dark:text-[#E6E6E6]/70">
                         {e[0]}
-                        <FiArrowUpRight className="ml-1 lg:md:block hidden" />
+                        <FiArrowUpRight className="ml-1 lg:md:sm:block hidden" />
                       </span>
                     </Link>
                   </div>
                 );
               })}
             </div>
-            <p className="mt-4 text-sm text-center text-[#151515] dark:text-[#E6E6E6]/70 lg:text-right lg:md:text-md lg:mt-0">
+            <p className="mt-4 text-sm text-center text-[#151515] dark:text-[#E6E6E6]/70 lg:text-right lg:md:sm:text-md lg:mt-0">
               Ishaan Bedi | {new Date().getFullYear()}
               <br />
               New Delhi {" • "}

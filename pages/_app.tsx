@@ -1,11 +1,10 @@
 import "../styles/globals.css";
-import "../styles/main.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "../components/Header";
-
+import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -27,6 +26,9 @@ function MyApp({ Component, pageProps }) {
           >
             <Header />
             <Component {...pageProps} />
+            <footer>
+              <Footer />
+            </footer>
             <Analytics />
           </motion.div>
         </AnimatePresence>

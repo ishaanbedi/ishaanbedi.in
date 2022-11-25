@@ -69,14 +69,10 @@ const Projects = () => {
               </div>
             </div>
           ))}
-          <Link
-            target={"_blank"}
-            href="https://www.github.com/ishaanbedi"
-            passHref
-          >
-            <p className="flex justify-center text-lg my-4 dark:text-[#E6E6E6]/70 hover:dark:text-[#E6E6E6] text-[#232323] dark:text-[#E6E6E6]/70/50">
-              Check out more on GitHub
-              <FiArrowUpRight className="ml-1 mt-0.5" />
+          <Link href={`/projects`}>
+            <p className="flex justify-center items-center text-lg my-4 dark:text-[#E6E6E6]/70 hover:dark:text-[#E6E6E6] text-[#232323] dark:text-[#E6E6E6]/70/50">
+              Check out more on /Projects
+              <FiArrowUpRight className="ml-1" />
             </p>
           </Link>
         </div>

@@ -20,6 +20,10 @@ const navLinks = [
     label: "Uses",
     link: "/uses",
   },
+  {
+    label: "Projects",
+    link: "/projects",
+  },
 ];
 
 const Header = () => {
@@ -109,7 +113,8 @@ const Header = () => {
   if (!mounted) return null;
   return (
     <header
-      className="overscroll-none"
+      className="overscroll-none sticky top-0 z-50 transition-all duration-300 ease-in-out backdrop-filter dark:bg-opacity-80 bg-opacity-80 bg-transparent dark:bg-[#151515] bg-[#E6E6E6] 
+      "
       onClick={() => {
         if (openNav) {
           setOpenNav(false);
@@ -125,7 +130,7 @@ const Header = () => {
           </Link>
 
           <div className="justify-end flex flex-row space-x-4 sm:flex mx-2">
-            <div className="mt-2 lg:md:flex space-x-4 hidden">
+            <div className="mt-2 lg:md:sm:flex space-x-4 hidden">
               {navLinks.map((link) => (
                 <Link href={link.link} key={link.label} passHref>
                   {link.link.includes("http") ? (
@@ -157,7 +162,7 @@ const Header = () => {
               onClick={() => {
                 setOpenNav(true);
               }}
-              className="text-[#737373] lg:md:hidden focus:border-none mr-1"
+              className="text-[#737373] lg:md:sm:hidden focus:border-none mr-1"
             >
               <BsCommand />
             </button>
