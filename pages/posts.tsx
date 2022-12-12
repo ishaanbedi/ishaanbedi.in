@@ -2,6 +2,32 @@ import Link from "next/link";
 import Head from "next/head";
 import supabase from "../utils/supabaseClient";
 const PostsPage = ({ data }) => {
+  function timeSince(date) {
+    const now: any = new Date();
+    const timeDifference = now - date;
+    const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365));
+    const months = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30));
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+    const minutes = Math.floor(timeDifference / (1000 * 60));
+    const seconds = Math.floor(timeDifference / 1000);
+    if (years > 0) {
+      return years + " years ago";
+    } else if (months > 0) {
+      return months + " months ago";
+    } else if (days > 0) {
+      if (days === 1) {
+        return days + " day ago";
+      }
+      return days + " days ago";
+    } else if (hours > 0) {
+      return hours + " hours ago";
+    } else if (minutes > 0) {
+      return minutes + " minutes ago";
+    } else {
+      return seconds + " seconds ago";
+    }
+  }
   return (
     <div className="min-h-screen lg:mx-80 mx-2 ">
       <Head>
@@ -34,28 +60,14 @@ const PostsPage = ({ data }) => {
           I&apos;ve written {data.length} articles in total, revolving around
           programming tutorials, tech, and life.
         </h1>
-
         {data.map((data) => (
           <div key={data.slug}>
             <Link passHref href={`/post/${data.slug}`}>
               <article className="ease-in duration-150 cursor-pointer p-1 shadow-sm rounded-md">
                 <div className="flex flex-col justify-end p-6 dark:bg-[#232323]/80 hover:dark:bg-[#232323] bg-[#c8c8c8] sm:p-8 rounded-md hover:bg-opacity-90">
                   <p className="text-left lg:hidden md:hidden flex  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
-                    {Number(data.date.slice(0, 4)) < new Date().getFullYear()
-                      ? `${
-                          -Number(data.date.slice(0, 4)) +
-                          new Date().getFullYear()
-                        } 
-                            ${
-                              -Number(data.date.slice(0, 4)) +
-                                new Date().getFullYear() >
-                              1
-                                ? "years"
-                                : "year"
-                            } ago`
-                      : `${
-                          new Date().getMonth() - data.date.slice(5, 7)
-                        } months ago`}
+                    {console.log(data.date)}
+                    {timeSince(new Date(data.date))}
                     {" • "}
                     {data.views
                       .toString()
@@ -68,7 +80,6 @@ const PostsPage = ({ data }) => {
                   <p className="text-left lg:flex md:flex hidden  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
                     {data.metaDesc}
                   </p>
-
                   <div className="flex flex-wrap items-center lg:justify-between md:justify-between justify-center mt-6">
                     <ul className="flex space-x-1">
                       {data.tags.map((item, id) => {
@@ -81,23 +92,8 @@ const PostsPage = ({ data }) => {
                         );
                       })}
                     </ul>
-
                     <p className="text-left lg:flex md:flex hidden  mt-2 lg:text-sm md:text-sm text-xs text-gray-500 dark:text-gray-400">
-                      {Number(data.date.slice(0, 4)) < new Date().getFullYear()
-                        ? `${
-                            -Number(data.date.slice(0, 4)) +
-                            new Date().getFullYear()
-                          } 
-                            ${
-                              -Number(data.date.slice(0, 4)) +
-                                new Date().getFullYear() >
-                              1
-                                ? "years"
-                                : "year"
-                            } ago`
-                        : `${
-                            new Date().getMonth() - data.date.slice(5, 7)
-                          } months ago`}
+                      {timeSince(new Date(data.date))}
                       {" • "}
                       {data.views
                         .toString()
