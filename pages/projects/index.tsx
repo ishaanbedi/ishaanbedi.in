@@ -2,16 +2,13 @@ import Head from "next/head";
 import {
   AiFillGithub,
   AiOutlineLink,
-  AiOutlineFieldTime,
 } from "react-icons/ai";
 import { ImKeyboard } from "react-icons/im";
 import { BsPatchQuestion } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
-import { FaVirus, FaQuoteLeft } from "react-icons/fa";
-import { HiTemplate } from "react-icons/hi";
-import { MdScience } from "react-icons/md";
 import { BiChip, BiMoney } from "react-icons/bi";
 import { SiConvertio } from "react-icons/si";
+import {BsKey} from "react-icons/bs";
 import Link from "next/link";
 
 const Projects = () => {
@@ -42,8 +39,15 @@ const Projects = () => {
     ],
     "Swift & SwiftUI": [
       {
+        title: "Swiflicense",
+        description: "Command line tool for generating a license for a software from CLI, built using Swift & SPM.",
+        icons: <BsKey />,
+        githubLink: "https://github.com/ishaanbedi/swiflicense",
+        webLink: null,
+      },
+      {
         title: "Chipify",
-        description: "Walkthrough of the powerful M Series Chips by Apple",
+        description: "Walkthrough of the powerful M Series Chips by Apple. A winning submission for WWDC'22 Swift Student Challenge",
         icons: <BiChip />,
         githubLink: "https://github.com/ishaanbedi/Chipify-WWDC22",
         webLink:
