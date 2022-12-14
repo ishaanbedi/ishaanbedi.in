@@ -43,7 +43,7 @@ const Projects = () => {
         description: "Command line tool for generating a license for a software from CLI, built using Swift & SPM.",
         icons: <BsKey />,
         githubLink: "https://github.com/ishaanbedi/swiflicense",
-        webLink: null,
+        webLink: "https://ishaanbedi.github.io/swiflicense/",
       },
       {
         title: "Chipify",
