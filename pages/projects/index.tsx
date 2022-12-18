@@ -8,7 +8,7 @@ import { BsPatchQuestion } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { BiChip, BiMoney } from "react-icons/bi";
 import { SiConvertio } from "react-icons/si";
-import {BsKey} from "react-icons/bs";
+import {BsKey, BsLink} from "react-icons/bs";
 import Link from "next/link";
 
 const Projects = () => {
@@ -44,6 +44,13 @@ const Projects = () => {
         icons: <BsKey />,
         githubLink: "https://github.com/ishaanbedi/swiflicense",
         webLink: "https://ishaanbedi.github.io/swiflicense/",
+      },
+      {
+        title: "swiftup",
+        description: "A Swift Command-Line Tool for Checking the Reachability of URLs",
+        icons: <BsLink />,
+        githubLink: "https://github.com/ishaanbedi/swiftup",
+        webLink: "https://www.ishaanbedi.in/post/swiftup-command-line-tool-check-reachability-urls",
       },
       {
         title: "Chipify",
