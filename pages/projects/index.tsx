@@ -8,7 +8,7 @@ import { BsPatchQuestion } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { BiChip, BiMoney } from "react-icons/bi";
 import { SiConvertio } from "react-icons/si";
-import {BsKey, BsLink} from "react-icons/bs";
+import {BsKey, BsLink, BsFillTerminalFill} from "react-icons/bs";
 import Link from "next/link";
 
 const Projects = () => {
@@ -35,6 +35,20 @@ const Projects = () => {
         icons: <CgWebsite />,
         githubLink: "https://github.com/ishaanbedi/ishaanbedi.in",
         webLink: "https://www.ishaanbedi.in/",
+      },
+      {
+        title: "shut-console",
+        description: "Tool to remove console.* statements from a project to prevent publishing on production and exposing sensitive information.",
+        icons: <BsFillTerminalFill />,
+        githubLink: "https://github.com/ishaanbedi/shut-console",
+        webLink: "https://www.npmjs.com/package/shut-console",
+      },
+      {
+        title: "ishn.xyz",
+        description: "Minimal link shortener service that's easy and free to use.",
+        icons: <BsLink />,
+        githubLink: "https://github.com/ishaanbedi/ishn.xyz",
+        webLink: "https://www.ishn.xyz/",
       },
     ],
     "Swift & SwiftUI": [
