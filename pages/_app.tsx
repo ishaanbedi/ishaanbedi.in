@@ -1,40 +1,20 @@
-import "../styles/globals.css";
-import { AnimatePresence, motion } from "framer-motion";
-import { ThemeProvider } from "next-themes";
-import NextNProgress from "nextjs-progressbar";
+import TopBar from "@/components/TopBar";
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
 import { Analytics } from "@vercel/analytics/react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-function MyApp({ Component, pageProps }) {
+
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <NextNProgress
-        color="#fff"
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={3}
-        showOnShallow={true}
-        options={{ showSpinner: false }}
-      />
-      <ThemeProvider enableSystem={true} attribute="class">
-        <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="content"
-          >
-            <Header />
-            <Component {...pageProps} />
-            <footer>
-              <Footer />
-            </footer>
-            <Analytics />
-          </motion.div>
-        </AnimatePresence>
-      </ThemeProvider>
+      <main className="bg-stone-900 text-stone-50 min-h-screen lg:md:sm:px-12 px-4 py-8 ">
+        <div className="flex flex-col lg:md:items-center lg:md:justify-center">
+          <section className="lg:md:sm:w-1/2 py-4">
+            <TopBar />
+          </section>
+        </div>
+        <Component {...pageProps} />
+      </main>
+      <Analytics />
     </>
   );
 }
-
-export default MyApp;

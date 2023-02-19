@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Head from "next/head";
-import Image from "next/legacy/image";
-import { TbError404 } from "react-icons/tb";
 export default function Custom404() {
   return (
     <>
@@ -18,15 +16,6 @@ export default function Custom404() {
             That page does not exist.
           </h1>
           <div className="flex flex-col">
-            <div>
-              <Image
-                src="/images/404-memoji.png"
-                width={200}
-                height={200}
-                alt="404"
-                className="shadow-xl"
-              />
-            </div>
             <Link passHref href="/">
               <button className="mt-4 bg-gray-900 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-800 text-[#E6E6E6] dark:text-gray-200 px-4 py-2 rounded-md">
                 <a>Go Home</a>
