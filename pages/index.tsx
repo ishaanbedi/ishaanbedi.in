@@ -5,8 +5,6 @@ import { getXataClient } from "@/src/xata";
 import Posts from "@/components/Posts";
 import GithubGraph from "@/components/GithubGraph";
 import Footer from "@/components/Footer";
-import { NextSeo } from "next-seo";
-
 export default function Home({
   records,
 }: {
@@ -51,7 +49,7 @@ export default function Home({
           content="https://www.ishaanbedi.in/meta/images/index.png"
         />
       </Head>
-      <div className="flex flex-col lg:md:items-center lg:md:justify-center">
+      <div className="flex flex-col lg:md:sm:items-center lg:md:sm:justify-center">
         <section className="lg:md:sm:w-1/2 py-4">
           <About />
         </section>

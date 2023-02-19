@@ -16,9 +16,7 @@ const Post = ({
 }) => {
   const title = matter(post).data.title;
   const date = matter(post).data.date;
-  const metaDesc = matter(post).data.metaDesc;
   const metaTitle = matter(post).data.metaTitle;
-  const tags = matter(post).data.tags;
   const content = matter(post).content;
   function readingTime(content: string) {
     const text = content;

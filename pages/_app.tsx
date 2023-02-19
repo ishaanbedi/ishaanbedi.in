@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <main className="bg-stone-900 text-stone-50 min-h-screen lg:md:sm:px-12 px-4 py-8 ">
-        <div className="flex flex-col lg:md:items-center lg:md:justify-center">
+        <div className="flex flex-col lg:md:sm:items-center lg:md:sm:justify-center">
           <section className="lg:md:sm:w-1/2 py-4">
             <TopBar />
           </section>
