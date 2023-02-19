@@ -49,7 +49,7 @@ const Post = ({
   }
   useEffect(() => {
     fetch(`/api/updateViews?id=${id}&views=${views}`);
-  }, []);
+  }, [id, views]);
   return (
     <section className="bg-stone-900 text-stone-50 pb-12">
       <Head>
