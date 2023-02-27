@@ -150,14 +150,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__kdpgo
                     )}
                   >
-                    <span
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      Developer / <AiFillApple /> WWDC 2022 Scholar / 20 y/o
+                    <span>
+                      Developer / <AiFillApple style={{ paddingTop: "4px" }} />{" "}
+                      WWDC 2022 Scholar / 20 y/o
                     </span>
                   </div>
                 </div>
