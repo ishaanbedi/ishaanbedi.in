@@ -1,0 +1,118 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "kWsMjK7xB47LtjfssqRijH",
+      "projectApiToken": "7sinQvilDTh3oWWjmOWHwT2mWm9USwwed6u5zXreswuFaNssKNZSOo0nlMiipLPI5ZYC4o7uT2BBHs6OBw",
+      "projectName": "Minimalist about-me page",
+      "version": "latest",
+      "cssFilePath": "plasmic/minimalist_about_me_page/plasmic_minimalist_about_me_page.module.css",
+      "components": [
+        {
+          "id": "Q09_Cz_q24g9b",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "kWsMjK7xB47LtjfssqRijH",
+          "renderModuleFilePath": "plasmic/minimalist_about_me_page/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/minimalist_about_me_page/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "xXAHk0ueYHdeW",
+          "name": "CopyableLink",
+          "type": "managed",
+          "projectId": "kWsMjK7xB47LtjfssqRijH",
+          "renderModuleFilePath": "plasmic/minimalist_about_me_page/PlasmicCopyableLink.tsx",
+          "importSpec": {
+            "modulePath": "CopyableLink.tsx"
+          },
+          "cssFilePath": "plasmic/minimalist_about_me_page/PlasmicCopyableLink.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        }
+      ],
+      "icons": [
+        {
+          "id": "82oVoziNjJ-F8",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/minimalist_about_me_page/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "xnWalUFV9-WHl",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/minimalist_about_me_page/icons/PlasmicIcon__Icon2.tsx"
+        },
+        {
+          "id": "Mdxgrb9xlRHbd",
+          "name": "Icon3Icon",
+          "moduleFilePath": "plasmic/minimalist_about_me_page/icons/PlasmicIcon__Icon3.tsx"
+        },
+        {
+          "id": "E95Tu5_LdJ",
+          "name": "GithubSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/minimalist_about_me_page/icons/PlasmicIcon__GithubSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "Bia34lzMMI",
+          "name": "LinkedinRoundSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/minimalist_about_me_page/icons/PlasmicIcon__LinkedinRoundSvgrepoComsvg.tsx"
+        }
+      ],
+      "images": [],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "lMr1sM-fic",
+          "name": "PlasmicHead",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "wOSueMok9j",
+          "name": "Fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "CUeVyOojJsaNe",
+        "name": "Screen",
+        "projectId": "kWsMjK7xB47LtjfssqRijH",
+        "contextFilePath": "plasmic/minimalist_about_me_page/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.215",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.215/dist/plasmic.schema.json"
+}
