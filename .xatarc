@@ -1,6 +1,0 @@
-{
-  "databaseURL": "https://ishaanbedi-in-mhq61u.us-east-1.xata.sh/db/ishaanbedi_in_posts",
-  "codegen": {
-    "output": "src/xata.ts"
-  }
-}
