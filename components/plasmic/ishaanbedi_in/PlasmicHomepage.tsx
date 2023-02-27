@@ -11,7 +11,7 @@
 // Plasmic Project: kWsMjK7xB47LtjfssqRijH
 // Component: Q09_Cz_q24g9b
 import * as React from "react";
-
+import { AiFillApple } from "react-icons/ai";
 import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
@@ -33,7 +33,7 @@ import {
   useTrigger,
   StrictProps,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
 } from "@plasmicapp/react-web";
 
 import { useScreenVariants as useScreenVariantscUeVyOojJsaNe } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: CUeVyOojJsaNe/globalVariant
@@ -85,7 +85,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -95,7 +95,7 @@ function PlasmicHomepage__RenderFunc(props: {
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantscUeVyOojJsaNe()
+    screen: useScreenVariantscUeVyOojJsaNe(),
   });
 
   return (
@@ -150,7 +150,15 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__kdpgo
                     )}
                   >
-                    {"Developer /  WWDC 2022 Scholar / 20 y/o"}
+                    <span
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      Developer / <AiFillApple /> WWDC 2022 Scholar / 20 y/o
+                    </span>
                   </div>
                 </div>
               </div>
@@ -249,7 +257,7 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -294,7 +302,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: [...PlasmicDescendants[nodeName]],
           internalArgPropNames: PlasmicHomepage__ArgProps,
-          internalVariantPropNames: PlasmicHomepage__VariantProps
+          internalVariantPropNames: PlasmicHomepage__VariantProps,
         }),
       [props, nodeName]
     );
@@ -303,7 +311,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "root") {
@@ -329,8 +337,8 @@ export const PlasmicHomepage = Object.assign(
       title: "",
       description: "",
       ogImageSrc: "",
-      canonical: ""
-    }
+      canonical: "",
+    },
   }
 );
 
