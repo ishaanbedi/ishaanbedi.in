@@ -1,9 +1,7 @@
 import SocialLink from "../components/SocialLink";
 import ProfileCard from "../components/ProfileCard";
-import Projects from "../components/Projects";
 import HeadTag from "../components/HeadTag";
 import Head from "next/head";
-import SubscribeForm from "../components/SubscribeForm";
 const Index = () => {
   return (
     <>
@@ -27,13 +25,11 @@ const Index = () => {
           content="https://og.ishaanbedi.in/api/home"
         />
       </Head>
-      <div className="min-h-screen lg:mx-80 mx-2 ">
-        <HeadTag name="Ishaan Bedi" />
-        <main>
+      <div className="min-h-screen flex flex-col items-center">
+        <HeadTag />
+        <main className="lg:md:sm:w-1/2 py-4">
           <ProfileCard />
           <SocialLink />
-          <Projects />
-          <SubscribeForm />
         </main>
       </div>
     </>

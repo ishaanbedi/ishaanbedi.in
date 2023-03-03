@@ -1,13 +1,13 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 const SocialLinks = () => {
   const socialLinks = {
     GitHub: { link: "https://www.github.com/ishaanbedi" },
     LinkedIn: { link: "https://www.linkedin.com/in/ishaanbedi13" },
     Twitter: { link: "https://www.twitter.com/ishnbedi" },
     CodePen: { link: "https://www.codepen.io/ishaanbedi" },
+    Posts: { link: "/posts" },
   };
   return (
     <div>
