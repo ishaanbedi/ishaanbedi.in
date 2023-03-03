@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  reactStrictMode: false,
+  images: {
+    domains: ["kcldtzblfykiwwltfouv.supabase.co"],
+  },
+  optimizeFonts: false,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
