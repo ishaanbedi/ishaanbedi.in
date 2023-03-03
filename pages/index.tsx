@@ -27,10 +27,10 @@ const Index = () => {
       </Head>
       <div className="min-h-screen flex flex-col items-center">
         <HeadTag />
-        <main className="lg:md:sm:w-1/2 py-4">
+        {/* <main className="lg:md:sm:w-1/2 py-4"> */}
           <ProfileCard />
-          <SocialLink />
-        </main>
+          {/* <SocialLink /> */}
+        {/* </main> */}
       </div>
     </>
   );
