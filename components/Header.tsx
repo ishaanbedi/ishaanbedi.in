@@ -14,7 +14,7 @@ const navLinks = [
   {
     label: "Posts",
     link: "/posts",
-  }
+  },
 ];
 const Header = () => {
   const router = useRouter();

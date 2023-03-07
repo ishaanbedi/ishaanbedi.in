@@ -41,7 +41,7 @@ const Footer = () => {
               <Link
                 target={"_blank"}
                 passHref
-                href={`https://www.github.com/ishaanbedi/ishaanbedi.in`}
+                href={`https://github.com/ishaanbedi/ishaanbedi.in/tree/revert`}
               >
                 <p className="text-[#151515] dark:text-[#E6E6E6]/70 lg:md:sm:text-md">
                   github/ishaanbedi/ishaanbedi.in

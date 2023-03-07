@@ -10,7 +10,7 @@ const Index = () => {
       <Head>
         <title>Ishaan Bedi | Developer</title>
       </Head>
-      <div className="flex flex-col items-center justify-center  px-3">
+      <div className="min-h-screen lg:mx-80 mx-2 ">
         <HeadTag name="Ishaan Bedi" />
         <main>
           <section className="mt-4">
